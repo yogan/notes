@@ -1,7 +1,7 @@
 # Technical things to read and know
 
 ## Windows
-* [Setting up a fresh Windows machine](windows/setup.mp)
+* [Setting up a fresh Windows machine](windows/setup.md)
 * [Running PowerShell scripts](windows/powershell.md)
 
 ## Web Development
