@@ -1,8 +1,8 @@
 # Technical things to read and know
 
 ## Windows
-* Setting up a fresh Windows machine
-* Running PowerShell scripts
+* [Setting up a fresh Windows machine](windows/setup.mp)
+* [Running PowerShell scripts](windows/powershell.md)
 
 ## Web Development
 * tbd.
