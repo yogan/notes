@@ -69,7 +69,7 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 ### mintty
 - `ln -s env/.minttyrc`
 - change taskbar icon to call:
-	- `mintty.exe --config ~/.minttyrc /bin/env MINTTY_THEME=black /bin/zsh --login`
+	- `mintty.exe /bin/zsh --login`
 
 ### Symlinks
 ```
