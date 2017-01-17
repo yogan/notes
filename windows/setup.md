@@ -60,6 +60,7 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 ### Misc.
 - [Paint.NET](http://www.getpaint.net)
 - [Greenshot](http://getgreenshot.org/de/)
+- [ScreenToGif](http://www.screentogif.com/)
 - [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html)
 
 
