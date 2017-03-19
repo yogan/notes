@@ -89,5 +89,18 @@ $ git clone ssh://zogan.de/~yogan/git/priv/docs
 $ cd ; ln -s winhome/env ; ln -s winhome/docs
 ```
 
+## Development
+
+### VS Code
+- Download [VS Code installer](https://code.visualstudio.com/Download)
+- be sure to have Explorer integration checked (if not, run installer again later)
+
+For initial setup, get user settings from gist:
+- add the [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) extension
+- `<Ctrl><Shift><p>` → `Preferences: Open User Settings`
+	- add `"sync.gist": "ae3bdfbb98c2054b242e1e0361628bfb"`
+	- remove all other `sync.*` settings
+- `<Ctrl><Shift><p>` → `Sync: Download settings`
+
 ## References
 - [SoCraTes 2016 Windows Tools Session Notes](https://blog.sandra-parsick.de/2016/09/20/summary-of-socrates-2016-session-hey-dude-where-is-my-tool-chain-working-on-windows-as-a-linux-user-aka-lets-talk-about-windows/)
