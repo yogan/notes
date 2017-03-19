@@ -2,6 +2,13 @@
 
 ## TODO
 - [ ] try to use [Chocolatey](https://chocolatey.org/) wherever possible
+### Choco TL;DR
+- start admin PowerShell
+- `iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex`
+- `choco` should be in `%PATH%` after installation
+- still, as software installation usually needs admin rights, call `choco install XYZ` from admin `cmd` or amdin `PowerShell`
+- installed software seems to be put to `C:\ProgramData\chocolatey\bin`
+	- ProTip™: use `which` from npm package (admin cmd> `npm install -g which`)
 
 ## Essentials
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html)
