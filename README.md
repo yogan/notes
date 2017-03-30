@@ -5,7 +5,7 @@
 * [Running PowerShell scripts](windows/powershell.md)
 
 ## Web Development
-* tbd.
+* [Chrome Developer Tools](webdev/chrome-dev-tools.md)
 
 ## License
 [![CC0](https://licensebuttons.net/p/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
