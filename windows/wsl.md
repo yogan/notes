@@ -4,8 +4,13 @@ Ongoing installation/setup notes.
 
 ## TODOs
 * `ssh-agent` magic
-* check why `git` behaves so weird wrt. file permissions
+* check why `git` behaves so weird wrt. file permissions (probably due to wrong `umask` [#1801](https://github.com/Microsoft/BashOnWindows/issues/1801), [#352](https://github.com/Microsoft/BashOnWindows/issues/352))
 * make `zsh` default shell (`chsh` wrote to `/etc/passwd`, but e.g. `tmux` still launches `bash`)
+
+## Resources
+* [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
+* [Microsoft/BashOnWindows GitHub Issue Tracker](https://github.com/microsoft/bashonwindows)
+* [List of programs that work on WSL](https://github.com/ethanhs/WSL-Programs) / [Can I Subsystem It?](https://github.com/davatron5000/can-i-subsystem-it)
 
 ## Install
 * [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
