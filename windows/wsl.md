@@ -5,7 +5,6 @@ Ongoing installation/setup notes.
 ## TODOs
 * `ssh-agent` magic
 * check why `git` behaves so weird wrt. file permissions (probably due to wrong `umask` [#1801](https://github.com/Microsoft/BashOnWindows/issues/1801), [#352](https://github.com/Microsoft/BashOnWindows/issues/352))
-* make `zsh` default shell (`chsh` wrote to `/etc/passwd`, but e.g. `tmux` still launches `bash`)
 
 ## Resources
 * [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
@@ -27,5 +26,8 @@ Ongoing installation/setup notes.
 * copy shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`, adapt to use `zsh` instead of `bash`
 
 ## zsh
-Seems to work fine with existing config. `compaudit` complained (rightfully) about insecure directories,
-which came from the `git` clone (`.zsh/` and `.zsh/functions/`); `chmod` to something proper…
+* `compaudit` complained (rightfully) about insecure directories,
+  which came from the `git` clone (`.zsh/` and `.zsh/functions/`); `chmod` to something proper…
+* workaround to make default shell (`chsh` does not help):
+  * launch from mintty via `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -o Locale=C -o Charset=UTF-8 /bin/wslbridge -C~ -t /bin/zsh --login`
+  * add `export SHELL=/bin/zsh` to `~/.zshenv`
