@@ -3,6 +3,7 @@
 ## Windows
 * [Setting up a fresh Windows machine](windows/setup.md)
 * [Running PowerShell scripts](windows/powershell.md)
+* [Windows Subsystem for Linux (WSL)](windows/wsl.md)
 
 ## Web Development
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
