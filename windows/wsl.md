@@ -3,7 +3,6 @@
 Ongoing installation/setup notes.
 
 ## TODOs
-* `ssh-agent` magic
 * check why `git` behaves so weird wrt. file permissions (probably due to wrong `umask` [#1801](https://github.com/Microsoft/BashOnWindows/issues/1801), [#352](https://github.com/Microsoft/BashOnWindows/issues/352))
 
 ## Resources
@@ -23,11 +22,12 @@ Ongoing installation/setup notes.
 ## Add mintty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty)
 * symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (rename `.minttyrc` to `config`)
-* copy shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`, adapt to use `zsh` instead of `bash`
+* copy shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`
+* adapt to use `zsh` instead of `bash`: `%LOCALAPPDATA%\wsltty\bin\mintty.exe -t "wsl/zsh" --wsl /bin/wslbridge -C~ -t /bin/zsh --login`
 
 ## zsh
 * `compaudit` complained (rightfully) about insecure directories,
   which came from the `git` clone (`.zsh/` and `.zsh/functions/`); `chmod` to something proper…
 * workaround to make default shell (`chsh` does not help):
-  * launch from mintty via `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -o Locale=C -o Charset=UTF-8 /bin/wslbridge -C~ -t /bin/zsh --login`
+  * launch from `mintty` via `wslbridge` (see above)
   * add `export SHELL=/bin/zsh` to `~/.zshenv`
