@@ -4,6 +4,7 @@
 * [Setting up a fresh Windows machine](windows/setup.md)
 * [Running PowerShell scripts](windows/powershell.md)
 * [Windows Subsystem for Linux (WSL)](windows/wsl.md)
+* [Fix Duplicate Pinned Taskbar Icons](windows/fix-duplicate-pinned-taskbar-icons.md)
 
 ## Web Development
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
