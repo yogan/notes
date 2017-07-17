@@ -19,6 +19,13 @@ Ongoing installation/setup notes.
   * `cmd` → `bash` → let installer run
   * `cmd` → `bash` → create user/password
 
+## Post-Install
+ * `sudo apt-get dist-upgrade`
+ * `sudo install git zsh`
+ * `ssh-keygen ; eval $(ssh-agent) ; ssh-add`
+ * `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
+ * symlink like a boss
+
 ## Add mintty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty)
 * symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (rename `.minttyrc` to `config`)
