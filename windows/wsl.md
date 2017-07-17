@@ -24,7 +24,8 @@ Ongoing installation/setup notes.
  * `sudo install git zsh`
  * `ssh-keygen ; eval $(ssh-agent) ; ssh-add`
  * `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
- * symlink like a boss
+ * `./env/bin/symlink-env.sh`
+ * `chmod 700 .zsh/ .zsh/functions/`
 
 ## Add mintty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty)
