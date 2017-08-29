@@ -9,5 +9,8 @@
 ## Web Development
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
 
+## Conference Notes
+* [SoCraTes 2017](conferences/socrates17.md)
+
 ## License
 [![CC0](https://licensebuttons.net/p/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
