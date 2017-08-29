@@ -37,14 +37,14 @@ symlinks, hardlinks, junctions, etc.
 - create --hardlink-- to `env/.inputrc` in `$HOME` (`c:/user/foo/`)
 - rename hardlinked `.inputrc` to `_inputrc`
 - edit shipped configuration: `C:\Program Files (x86)\clink\<VERSION>\clink_inputrc_base`
-- comment out those lines:  
+- comment out those lines:
 `#M-h:                show-rl-help`
 
 ### ConsoleZ
 [ConsoleZ](https://github.com/cbucher/console) - a proper terminal around `cmd` and `PowerShell`
 
 Settings are stored in `%APPDATA%\Console`, e.g.
-`C:\Users\yogan\AppData\Roaming\Console`.  
+`C:\Users\yogan\AppData\Roaming\Console`.
 
 ### Misc.
 - [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx)
