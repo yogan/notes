@@ -13,3 +13,8 @@ or just use `<Meta><.>`
 ### peco
 * [peco on GitHub](https://github.com/peco/peco)
 * [Integration with fish](https://github.com/janernsting/dotfiles/blob/master/fish/functions/search_history.fish) to search through history
+
+
+## Code Retreat / Katas
+
+* [Kata-Log](http://kata-log.rocks/) list of katas with different topics, also: various constraints
