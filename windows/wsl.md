@@ -2,9 +2,6 @@
 
 Ongoing installation/setup notes.
 
-## TODOs
-* check why `git` behaves so weird wrt. file permissions (probably due to wrong `umask` [#1801](https://github.com/Microsoft/BashOnWindows/issues/1801), [#352](https://github.com/Microsoft/BashOnWindows/issues/352))
-
 ## Resources
 * [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
 * [Microsoft/BashOnWindows GitHub Issue Tracker](https://github.com/microsoft/bashonwindows)
@@ -23,9 +20,9 @@ Ongoing installation/setup notes.
  * `sudo apt-get dist-upgrade`
  * `sudo install git zsh`
  * `ssh-keygen ; eval $(ssh-agent) ; ssh-add`
+ * Make sure that the `umask` is set to `022` (should be done by `zsh`/`fish` configs), otherwise cloned git repos (and everything else) have fucked up file/dir permissions. When cloning initial env with `bash`, either set `umask` manually or just add it to the (default WSL) `.bashrc`.
  * `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
  * `./env/bin/symlink-env.sh`
- * `chmod 700 .zsh/ .zsh/functions/`
 
 ## Add mintty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty)
@@ -43,10 +40,7 @@ Ongoing installation/setup notes.
 ### Starting with mintty
 * like for `zsh` above; just change param given to `wslbridge` to `/usr/local/bin/fish`
 
-
 ## zsh
-* `compaudit` complained (rightfully) about insecure directories,
-  which came from the `git` clone (`.zsh/` and `.zsh/functions/`); `chmod` to something proper…
 * workaround to make default shell (`chsh` does not help):
   * launch from `mintty` via `wslbridge` (see above)
   * add `export SHELL=/bin/zsh` to `~/.zshenv`
