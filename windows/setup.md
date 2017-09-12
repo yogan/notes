@@ -72,6 +72,9 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 
 ## Cygwin/Babun
+
+**NOTE:** This can probably soon be completely replaced by [WSL](wsl.md).
+
 [Babun](https://babun.github.io)
 
 ### mintty
