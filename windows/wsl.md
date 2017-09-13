@@ -1,5 +1,5 @@
 # Windows Subsystem for Linux (WSL)
-## (aka Bash on Ubuntu on Windows)
+**(aka Bash on Ubuntu on Windows)**
 
 Ongoing installation/setup notes.
 
