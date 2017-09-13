@@ -7,6 +7,7 @@ Ongoing installation/setup notes.
 * [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
 * [Microsoft/BashOnWindows GitHub Issue Tracker](https://github.com/microsoft/bashonwindows)
 * [List of programs that work on WSL](https://github.com/ethanhs/WSL-Programs) / [Can I Subsystem It?](https://github.com/davatron5000/can-i-subsystem-it)
+* [Release Notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes) (updated with newer builds)
 
 ## Install
 * [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
@@ -16,6 +17,18 @@ Ongoing installation/setup notes.
   * reboot when prompted
   * `cmd` → `bash` → let installer run
   * `cmd` → `bash` → create user/password
+
+## Upgrade
+Initial WSL (released with Win 10 Annivery Update / v1607) shipped with Ubuntu 14.04 LTS (Trusty).
+With [WSL Build 14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
+(which itself is available since Windows 10 Creators Update / v1703)
+Ubuntu 16.06 LTS (Xenial) is [supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
+but not automatically upgraded.
+
+To upgrade an existing 14.04, you can either:
+* uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from `cmd` or PowerShell)
+* upgrade in place: `sudo do-release-upgrade` (inside a running WSL shell)
+The later seems to work fine, just like upgrading a "real" Ubuntu/Debian installation. After the upgrade, a (Windows) reboot is needed.
 
 ## Post-Install
  * `sudo apt-get dist-upgrade`
