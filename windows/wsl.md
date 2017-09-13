@@ -26,17 +26,19 @@ Ubuntu 16.06 LTS (Xenial) is [supported](https://blogs.msdn.microsoft.com/comman
 but not automatically upgraded.
 
 To upgrade an existing 14.04, you can either:
+
 * uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from `cmd` or PowerShell)
 * upgrade in place: `sudo do-release-upgrade` (inside a running WSL shell)
-The later seems to work fine, just like upgrading a "real" Ubuntu/Debian installation. After the upgrade, a (Windows) reboot is needed.
+
+The later seems to work fine, just like upgrading a "real" Ubuntu/Debian installation. After the upgrade, a Windows reboot is needed.
 
 ## Post-Install
- * `sudo apt-get dist-upgrade`
- * `sudo install git zsh`
- * `ssh-keygen ; eval $(ssh-agent) ; ssh-add`
- * Make sure that the `umask` is set to `022` (should be done by `zsh`/`fish` configs), otherwise cloned git repos (and everything else) have fucked up file/dir permissions. When cloning initial env with `bash`, either set `umask` manually or just add it to the (default WSL) `.bashrc`.
- * `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
- * `./env/bin/symlink-env.sh`
+* `sudo apt-get dist-upgrade`
+* `sudo install git zsh`
+* `ssh-keygen ; eval $(ssh-agent) ; ssh-add`
+* Make sure that the `umask` is set to `022` (should be done by `zsh`/`fish` configs), otherwise cloned git repos (and everything else) have fucked up file/dir permissions. When cloning initial env with `bash`, either set `umask` manually or just add it to the (default WSL) `.bashrc`.
+* `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
+* `./env/bin/symlink-env.sh`
 
 ## Add mintty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty)
