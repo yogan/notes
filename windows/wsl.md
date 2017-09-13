@@ -47,14 +47,21 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 * adapt to use `zsh` instead of `bash`: `%LOCALAPPDATA%\wsltty\bin\mintty.exe -t "wsl/zsh" --wsl /bin/wslbridge -C~ -t /bin/zsh --login`
 
 ## fish
+
 ### Build and Install from Source
 * `git clone git://github.com/fish-shell/fish-shell.git`
 * `autoreconf --no-recursive`
 * `./configure` *(normally I would add `--prefix=$HOME/local`, but for WSL it's fine to install globally)*
 * `make -j && sudo make install`
 * *adding to `/etc/shells` and `chsh` are not needed/don't work on WSL*
+
 ### Starting with mintty
 * like for `zsh` above; just change param given to `wslbridge` to `/usr/local/bin/fish`
+
+### Setup oh-my-fish
+* `curl -L https://get.oh-my.fish | fish` (if you like to live dangerously, or [download and check](https://github.com/oh-my-fish/oh-my-fish#installation) the installer first)
+* `omf install` (to get theme)
+* `omf reload`
 
 ## zsh
 * workaround to make default shell (`chsh` does not help):
