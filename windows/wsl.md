@@ -1,8 +1,6 @@
 # Windows Subsystem for Linux (WSL)
 **(aka Bash on Ubuntu on Windows)**
 
-Ongoing installation/setup notes.
-
 ## Resources
 * [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
 * [Microsoft/BashOnWindows GitHub Issue Tracker](https://github.com/microsoft/bashonwindows)
@@ -67,3 +65,25 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 * workaround to make default shell (`chsh` does not help):
   * launch from `mintty` via `wslbridge` (see above)
   * add `export SHELL=/bin/zsh` to `~/.zshenv`
+
+
+## Interoperability
+
+### Filesystem
+
+The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and *should not* be modified by
+Windows applications. The Windows filesystems ("drives") are mounted below `/mnt/{c,d,...}` under
+WSL and *can* be modified from Linux applications.
+So for any shared data it is good practice to place them in some Windows directory, e.g. somewhere
+below the Windows user home (`%userprofile%` → `C:\Users\<foo>`) access them from WSL via a symlink,
+e.g. `ln -s /mnt/c/Users/fbr/ winhome`.
+
+### Launching Windows Applications
+
+Since [build 14965](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14965),
+Windows applications can be easily launched from a WSL shell, as the NT user path is by default
+appended to the Linux `$PATH`. Just try something like `notepad.exe` or even go nuts and do `cmd.exe`.
+
+The current (Linux) working directory is translated and passed to the Windows application, as long as
+it is something below `/mnt/`; otherwise a warning will be printed. So you can e.g. start VS Code in
+the current directory with `code .`
