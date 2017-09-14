@@ -71,9 +71,11 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 
 ### Filesystem
 
-The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and *should not* be modified by
-Windows applications. The Windows filesystems ("drives") are mounted below `/mnt/{c,d,...}` under
-WSL and *can* be modified from Linux applications.
+The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and
+[*should not* be modified](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+by Windows applications. The Windows filesystems ("drives") are mounted below
+`/mnt/{c,d,...}` under WSL and *can* be modified from Linux applications.
+
 So for any shared data it is good practice to place them in some Windows directory, e.g. somewhere
 below the Windows user home (`%userprofile%` → `C:\Users\<foo>`) access them from WSL via a symlink,
 e.g. `ln -s /mnt/c/Users/fbr/ winhome`.
