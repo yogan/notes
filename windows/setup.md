@@ -2,6 +2,8 @@
 
 ## TODO
 - [ ] try to use [Chocolatey](https://chocolatey.org/) wherever possible
+- [ ] maybe go even further and use [Boxstarter](http://boxstarter.org/) (see blog post by jsfraz: [Setting Up a Windows Machine in a Reproducible Way](https://blog.jessfraz.com/post/windows-for-linux-nerds/#setting-up-a-windows-machine-in-a-reproducible-way))
+
 ### Choco TL;DR
 - start admin PowerShell
 - `iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex`
@@ -75,7 +77,7 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 ## Cygwin/Babun
 
-**NOTE:** This can probably soon be completely replaced by [WSL](wsl.md).
+**TODO:** *Remove this section, refer to [WSL](wsl.md) instead. Decide where to document cloning of env (short version: one clone in WLS, one in Windows home, b/c file i/o)*
 
 [Babun](https://babun.github.io)
 
@@ -113,6 +115,10 @@ For initial setup, get user settings from gist:
 	- add `"sync.gist": "ae3bdfbb98c2054b242e1e0361628bfb"`
 	- remove all other `sync.*` settings
 - `<Ctrl><Shift><p>` → `Sync: Download settings`
+
+Settings are stored in `%APPDATA%\Code\User\`.
+
+**TODO:** *figure out how this fscking `syncLocalSettings.json` works*
 
 ## References
 - [SoCraTes 2016 Windows Tools Session Notes](https://blog.sandra-parsick.de/2016/09/20/summary-of-socrates-2016-session-hey-dude-where-is-my-tool-chain-working-on-windows-as-a-linux-user-aka-lets-talk-about-windows/)
