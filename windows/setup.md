@@ -22,6 +22,8 @@
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
 - [WinCompose](https://github.com/SamHocevar/wincompose)
+  - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how to symlink are at the top of `WinCompose.XCompose` itself)
+  - use a env clone in Windows for this; do not link to env within WSL!
 
 
 ## System Tools
