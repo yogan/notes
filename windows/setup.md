@@ -34,7 +34,7 @@ symlinks, hardlinks, junctions, etc.
 [clink](https://mridgers.github.io/clink/) - readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink`
-- create --hardlink-- to `env/.inputrc` in `$HOME` (`c:/user/foo/`)
+- create *hardlink* to `env/.inputrc` in `$HOME` (`c:/user/foo/`)
 - rename hardlinked `.inputrc` to `_inputrc`
 - edit shipped configuration: `C:\Program Files (x86)\clink\<VERSION>\clink_inputrc_base`
 - comment out those lines:
@@ -55,9 +55,9 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 ### Vim
 - [Download Windows Installer](http://www.vim.org/download.php#pc) and run it
-- create --hardlink-- to `env/.vimrc` in `$HOME` (`c:/user/foo/`)
+- create *hardlink* to `env/.vimrc` in `$HOME` (`c:/user/foo/`)
 - rename hardlinked `.vimrc` to `_vimrc`
-- make --junction-- of `env/.vim/` to `c:\Program Files\vim\`
+- make *junction* of `env/.vim/` to `c:\Program Files\vim\`
 - rename `.vim` to `vimfiles` (remove old one there)
 
 ### Spotify
