@@ -51,7 +51,7 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 ## fish
 
 ### Build and Install from Source
-* `git clone --depth 1 git://github.com/fish-shell/fish-shell.git && cd fish-shell`
+* `git clone git://github.com/fish-shell/fish-shell.git && cd fish-shell`
 * `sudo apt install automake build-essential libncurses5-dev`
 * `autoreconf --no-recursive`
 * `./configure` *(normally I would add `--prefix=$HOME/local`, but for WSL it's fine to install globally)*
