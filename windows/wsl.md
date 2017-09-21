@@ -20,8 +20,12 @@
 Initial WSL (released with Win 10 Annivery Update / v1607) shipped with Ubuntu 14.04 LTS (Trusty).
 With [WSL Build 14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
 (which itself is available since Windows 10 Creators Update / v1703)
-Ubuntu 16.06 LTS (Xenial) is [supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
+Ubuntu 16.04 LTS (Xenial) is [supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
 but not automatically upgraded.
+
+To check versions:
+* Windows: `winver.exe`
+* WSL/Ubuntu: `lsb_release -a`
 
 To upgrade an existing 14.04, you can either:
 
