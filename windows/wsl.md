@@ -51,7 +51,8 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 ## fish
 
 ### Build and Install from Source
-* `git clone git://github.com/fish-shell/fish-shell.git`
+* `git clone --depth 1 git://github.com/fish-shell/fish-shell.git && cd fish-shell`
+* `sudo apt install automake build-essential libncurses5-dev`
 * `autoreconf --no-recursive`
 * `./configure` *(normally I would add `--prefix=$HOME/local`, but for WSL it's fine to install globally)*
 * `make -j && sudo make install`
@@ -59,6 +60,7 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 
 ### Starting with mintty
 * like for `zsh` above; just change param given to `wslbridge` to `/usr/local/bin/fish`
+* eye candy: use icon from `env/icons/fish-terminal.ico`
 
 ### Setup oh-my-fish
 * `curl -L https://get.oh-my.fish | fish` (if you like to live dangerously, or [download and check](https://github.com/oh-my-fish/oh-my-fish#installation) the installer first)
