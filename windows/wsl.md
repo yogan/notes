@@ -67,6 +67,16 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 * `omf install` (to get theme)
 * `omf reload`
 
+### Setup fzf
+* `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf`
+* `~/.fzf/install`
+* answer setup questions:
+  * `Do you want to enable fuzzy auto-completion?` **`y`**
+  * `Do you want to enable key bindings?`  **`y`**
+  * `Do you want to update your shell configuration files?` **`n`**
+* `omf reload`
+
+
 ## zsh
 * workaround to make default shell (`chsh` does not help):
   * launch from `mintty` via `wslbridge` (see above)
