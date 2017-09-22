@@ -76,6 +76,12 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
   * `Do you want to update your shell configuration files?` **`n`**
 * `omf reload`
 
+### $PATH / $fish_user_paths
+Path things are a bit weird in fish. You can add paths to a universal variable `fish_user_paths`,
+which then magically is persisted on the local machine, and also prepended to `PATH`. This actually
+works better then expected. I have two little convenience functions `path` (to print the values of
+the two variables) and `add_path` (to add e.g. `~/bin`, `~/.fzf/bin`, etc.)
+
 
 ## zsh
 * workaround to make default shell (`chsh` does not help):
