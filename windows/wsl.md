@@ -42,6 +42,7 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
   * later in `fish` everything will be fine, as this is done by my config (`.config/fish/conf.d/env.fish`)
 * `git clone ssh://yogan@zogan.de/~yogan/git/priv/env` *(actually do this twice: once in the WSL home, and once in Windows home; reason: r/w from outside of WSL should not be done, see section "Interoperability", but to keep permissions and special file types like symlinks in the Linux world, just symlinking out of the WSL filesystem is also not possible)*
 * `./env/bin/symlink-env.sh`
+* `ssh-keygen`
 
 ## Add mintty/wsltty as Terminal
 * [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
