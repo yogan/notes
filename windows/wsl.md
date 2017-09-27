@@ -36,17 +36,27 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 
 ## Post-Install
 * sudo apt-get update && sudo apt-get dist-upgrade
-* Make sure that the `umask` is set to `022` (should be done by `zsh`/`fish` configs), otherwise cloned git repos (and everything else) have fucked up file/dir permissions. When cloning initial env with `bash`, either set `umask` manually (`umask 022`) and add it to the (default WSL) `.bashrc`.
-* `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
+* Make sure that the `umask` is set to `022`, which is not the case in the initial `bash` instance, otherwise cloned git repos (and everything else) have fucked up file/dir permissions!
+  * set in running shell with `umask 022`
+  * also add to the top of the shipped WSL version of `~/.bashrc`
+  * later in `fish` everything will be fine, as this is done by my config (`.config/fish/conf.d/env.fish`)
+* `git clone ssh://yogan@zogan.de/~yogan/git/priv/env` *(actually do this twice: once in the WSL home, and once in Windows home; reason: r/w from outside of WSL should not be done, see section "Interoperability", but to keep permissions and special file types like symlinks in the Linux world, just symlinking out of the WSL filesystem is also not possible)*
 * `./env/bin/symlink-env.sh`
 
-## Add mintty as Terminal
-* [wsltty@GitHub](https://github.com/mintty/wsltty)
-* symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (rename `.minttyrc` to `config`)
-* copy shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`
-* adapt to use `zsh` instead of `bash`: `%LOCALAPPDATA%\wsltty\bin\mintty.exe -t "wsl/zsh" --wsl /bin/wslbridge -C~ -t /bin/zsh --login`
+## Add mintty/wsltty as Terminal
+* [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
+* symlink `env/.minttyrc` to `%APPDATA%\wsltty\config`
+  * delete shipped `%APPDATA%\wsltty\config` file
+  * use `env` git from Windows home; symlink with Explorer/ShellExt
+  * rename `.minttyrc` symlink to `config`
+* copy *"WSL ~ in Mintty"* shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`, rename to *"WSL fish"*
+* adapt target of shortcut to use `fish` instead of `bash`:
+  * `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -h err --configdir="%APPDATA%\wsltty" `*`-o FontHeight=12`*` /bin/wslbridge -C~ -t /usr/local/bin/fish`
+  * `-o LOCALE=C -o Charset=UTF-8` from shipped wsltty shortcut can be removed, they are present in my symlinked `.minttyrc` anyway
+  * `-o FontHeight `*`NUM`* can be added when needed to override the value from the config file
+* eye candy: use icon from `env/icons/fish-terminal.ico`
 
-## fish
+## fish Shell
 
 ### Build and Install from Source
 * `git clone git://github.com/fish-shell/fish-shell.git && cd fish-shell`
@@ -55,10 +65,6 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 * `./configure` *(normally I would add `--prefix=$HOME/local`, but for WSL it's fine to install globally)*
 * `make -j && sudo make install`
 * *adding to `/etc/shells` and `chsh` are not needed/don't work on WSL*
-
-### Starting with mintty
-* like for `zsh` above; just change param given to `wslbridge` to `/usr/local/bin/fish`
-* eye candy: use icon from `env/icons/fish-terminal.ico`
 
 ### Setup oh-my-fish
 * `curl -L https://get.oh-my.fish | fish` (if you like to live dangerously, or [download and check](https://github.com/oh-my-fish/oh-my-fish#installation) the installer first)
@@ -79,12 +85,6 @@ Path things are a bit weird in fish. You can add paths to a universal variable `
 which then magically is persisted on the local machine, and also prepended to `PATH`. This actually
 works better then expected. I have two little convenience functions `path` (to print the values of
 the two variables) and `add_path` (to add e.g. `~/bin`, `~/.fzf/bin`, etc.)
-
-
-## zsh
-* workaround to make default shell (`chsh` does not help):
-  * launch from `mintty` via `wslbridge` (see above)
-  * add `export SHELL=/bin/zsh` to `~/.zshenv`
 
 
 ## Interoperability
