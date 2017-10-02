@@ -9,6 +9,7 @@
 
 ## Web Development
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
+* [JavaScript](webdev/javascript.md)
 
 ## Conference Notes
 * [SoCraTes 2017](conferences/socrates17.md)
