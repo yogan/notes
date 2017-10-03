@@ -10,9 +10,7 @@
 Helpful for debugging, e.g. to quickly simulate a slow backend.
 
 ```js
-const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 console.log('sleeping...');
 await sleep(3400);
