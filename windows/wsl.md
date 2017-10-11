@@ -55,6 +55,7 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
   * `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -h err --configdir="%APPDATA%\wsltty" `*`-o FontHeight=12`*` /bin/wslbridge -C~ -t /usr/local/bin/fish`
   * `-o LOCALE=C -o Charset=UTF-8` from shipped wsltty shortcut can be removed, they are present in my symlinked `.minttyrc` anyway
   * `-o FontHeight `*`NUM`* can be added when needed to override the value from the config file
+* font: install "DejaVu Sans Mono Nerd Font" from [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases) (unzip, install `"* Mono Windows Compatible.ttf"`)
 * eye candy: use icon from `env/icons/fish-terminal.ico`
 
 ## fish Shell
