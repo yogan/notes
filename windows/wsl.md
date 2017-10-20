@@ -44,6 +44,11 @@ The later seems to work fine, just like upgrading a "real" Ubuntu/Debian install
 * `ssh-keygen`
 
 ## Add mintty/wsltty as Terminal
+
+**TODO:**
+After installation of Windows Fall Creators Update (v1709), wsl comes with a `wsl.exe` that respects shell entries from `/etc/passwd`, so `chsh` should work. See if it really does, and replace the manual launch of fish below.
+Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199) and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
+
 * [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
 * symlink `env/.minttyrc` to `%APPDATA%\wsltty\config`
   * delete shipped `%APPDATA%\wsltty\config` file
