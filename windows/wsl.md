@@ -1,5 +1,4 @@
 # Windows Subsystem for Linux (WSL)
-**(aka Bash on Ubuntu on Windows)**
 
 ## Resources
 * [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
