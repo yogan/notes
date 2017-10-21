@@ -1,12 +1,13 @@
 # JavaScript
 
 ## Resources
-* [Modern JS Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet#table-of-contents)
 
+* [Modern JS Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet#table-of-contents)
 
 ## Lil' Bits
 
 ### `sleep()`ing in an asynchronous world
+
 Helpful for debugging, e.g. to quickly simulate a slow backend.
 
 ```js
