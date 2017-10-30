@@ -1,9 +1,5 @@
 # Setting up a fresh Windows machine
 
-## TODO
-
-- [ ] evaluate [Boxstarter](http://boxstarter.org/) (see blog post by jsfraz: [Setting Up a Windows Machine in a Reproducible Way](https://blog.jessfraz.com/post/windows-for-linux-nerds/#setting-up-a-windows-machine-in-a-reproducible-way))
-
 ## Chocolatey
 
 ### First Time Setup
@@ -147,3 +143,7 @@ Settings are stored in `%APPDATA%\Code\User\`.
 ## References
 
 - [SoCraTes 2016 Windows Tools Session Notes](https://blog.sandra-parsick.de/2016/09/20/summary-of-socrates-2016-session-hey-dude-where-is-my-tool-chain-working-on-windows-as-a-linux-user-aka-lets-talk-about-windows/)
+
+## TODO
+
+- [ ] evaluate [Boxstarter](http://boxstarter.org/) (see blog post by jsfraz: [Setting Up a Windows Machine in a Reproducible Way](https://blog.jessfraz.com/post/windows-for-linux-nerds/#setting-up-a-windows-machine-in-a-reproducible-way))
