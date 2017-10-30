@@ -89,30 +89,15 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 - [ScreenToGif](http://www.screentogif.com/)
 - [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html)
 
-## Cygwin/Babun
+## WSL
 
-**TODO:** *Remove this section, refer to [WSL](wsl.md) instead. Decide where to document cloning of env (short version: one clone in WLS, one in Windows home, b/c file i/o)*
-
-[Babun](https://babun.github.io)
-
-### mintty
-
-- `ln -s env/.minttyrc`
-- change taskbar icon to call:
-  - `mintty.exe /bin/zsh --login`
-
-### Symlinks
-
-```sh
-ln -s /cygdrive/c
-ln -s c/Users/yogan winhome
-```
+See [Windows Subsystem for Linux (WSL)](wsl.md).
 
 ### Clone git Repos
 
-Since the whole cygwin/Babun dir tree is somehow fucked up regarding default permissions,
-clone all git repos into Windows home, and symlink to them from within cygwin
-for quick access.
+To enable working with both Linux (WSL) and Windows programs on the files in my git repositories,
+they have to be cloned to a Windows path. Cloning and other git operations can be done straight
+from a WSL shell with WSL git.
 
 ```sh
 cd winhome
