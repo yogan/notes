@@ -2,17 +2,29 @@
 
 ## TODO
 
-- [ ] try to use [Chocolatey](https://chocolatey.org/) wherever possible
-- [ ] maybe go even further and use [Boxstarter](http://boxstarter.org/) (see blog post by jsfraz: [Setting Up a Windows Machine in a Reproducible Way](https://blog.jessfraz.com/post/windows-for-linux-nerds/#setting-up-a-windows-machine-in-a-reproducible-way))
+- [ ] evaluate [Boxstarter](http://boxstarter.org/) (see blog post by jsfraz: [Setting Up a Windows Machine in a Reproducible Way](https://blog.jessfraz.com/post/windows-for-linux-nerds/#setting-up-a-windows-machine-in-a-reproducible-way))
 
-### Choco TL;DR
+## Chocolatey
 
-- start admin PowerShell
-- `iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex`
+### First Time Setup
+
+- [install Chocolatey](https://chocolatey.org/install) as described (from Admin `cmd` or `PowerShell`)
 - `choco` should be in `%PATH%` after installation
-- still, as software installation usually needs admin rights, call `choco install XYZ` from admin `cmd` or amdin `PowerShell`
-- installed software seems to be put to `C:\ProgramData\chocolatey\bin`
-  - ProTip™: use `which` from npm package (admin cmd> `npm install -g which`)
+  - ProTip™: use `which` npm package (`npm install -g which`)
+
+### Usage
+
+It makes sense to always use an elevated (Admin) `cmd` or `PowerShell` to work with `choco` (as we are installing software, this is perfectly fine.)
+
+To install something new:
+
+- `choco search foo`
+- `choco install foo`
+
+List and upgrade locally installed packages.
+
+- `choco list -l`
+- `choco upgrade all`
 
 ## Essentials
 
