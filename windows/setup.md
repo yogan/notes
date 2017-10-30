@@ -24,17 +24,16 @@ List and upgrade locally installed packages.
 
 ## Essentials
 
-- [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html)
-- [Dropbox](http://www.dropbox.com)
-  - install client, get `keepass.db`
-- [Keepass](http://keepass.info/)
+- [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) - `choco install GoogleChrome`
+- [Dropbox](http://www.dropbox.com) - `choco install dropbox`, get `keepass.db`
+- [Keepass](http://keepass.info/) - `choco install keepass`
 
 ## Keyboard
 
-- [SharpKeys](https://sharpkeys.codeplex.com)
+- [SharpKeys](https://sharpkeys.codeplex.com) - `choco install sharpkeys`
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
-- [WinCompose](https://github.com/SamHocevar/wincompose)
+- [WinCompose](https://github.com/SamHocevar/wincompose) - `choco install wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how to symlink are at the top of `WinCompose.XCompose` itself)
   - use a env clone in Windows for this; do not link to env within WSL!
 
@@ -42,12 +41,12 @@ List and upgrade locally installed packages.
 
 ### Link Shell Extension
 
-[Link Shell Extension](http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html) - to create
+[Link Shell Extension](http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html) - `choco install LinkShellExtension` - to create
 symlinks, hardlinks, junctions, etc.
 
 ### clink
 
-[clink](https://mridgers.github.io/clink/) - readline/history for `cmd.exe`
+[clink](https://mridgers.github.io/clink/) - `choco install clink` - readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink`
 - create *hardlink* to `env/.inputrc` in `$HOME` (`c:/user/foo/`)
@@ -57,21 +56,21 @@ symlinks, hardlinks, junctions, etc.
 
 ### ConsoleZ
 
-[ConsoleZ](https://github.com/cbucher/console) - a proper terminal around `cmd` and `PowerShell`
+[ConsoleZ](https://github.com/cbucher/console) - `choco install ConsoleZ` - a proper terminal around `cmd` and `PowerShell`
 
 Settings are stored in `%APPDATA%\Console`, e.g.
 `C:\Users\yogan\AppData\Roaming\Console`.
 
 ### Miscellaneous
 
-- [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx)
-- [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx)
+- [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx) - `choco install procexp`
+- [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) - `choco install AutoRuns`
 
 ## Applications
 
 ### Vim
 
-- [Download Windows Installer](http://www.vim.org/download.php#pc) and run it
+- `choco install vim`
 - create *hardlink* to `env/.vimrc` in `$HOME` (`c:/user/foo/`)
 - rename hardlinked `.vimrc` to `_vimrc`
 - make *junction* of `env/.vim/` to `c:\Program Files\vim\`
@@ -79,15 +78,15 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 ### Spotify
 
-- [Spotify](https://www.spotify.com)
-- [Toastify](https://toastify.codeplex.com/) - global keyboard shortcuts and notifications
+- [Spotify](https://www.spotify.com) - `choco install spotify`
+- [Toastify](https://toastify.codeplex.com/) - `choco install toastify` - global keyboard shortcuts and notifications
 
 ### Graphics/Viewers
 
-- [Paint.NET](http://www.getpaint.net)
-- [Greenshot](http://getgreenshot.org/de/)
-- [ScreenToGif](http://www.screentogif.com/)
-- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html)
+- [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
+- [Greenshot](http://getgreenshot.org/de/) - `choco install greenshot`
+- [ScreenToGif](http://www.screentogif.com/) - `choco install screentogif`
+- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) - `choco install sumatrapdf`
 
 ## WSL
 
@@ -110,7 +109,7 @@ cd ; ln -s winhome/env ; ln -s winhome/docs
 
 ### VS Code
 
-- Download [VS Code installer](https://code.visualstudio.com/Download)
+- `choco install VisualStudioCode`
 - be sure to have Explorer integration checked (if not, run installer again later)
 
 For initial setup, get user settings from gist:
