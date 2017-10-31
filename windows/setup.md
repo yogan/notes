@@ -7,6 +7,7 @@
 - [install Chocolatey](https://chocolatey.org/install) as described (from Admin `cmd` or `PowerShell`)
 - `choco` should be in `%PATH%` after installation
   - ProTip™: use `which` npm package (`npm install -g which`)
+- `choco feature enable -n=allowGlobalConfirmation`
 
 ### Usage
 
