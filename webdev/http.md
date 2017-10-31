@@ -35,3 +35,55 @@ http example.org \
   X-Foo:Bar \
   Referer:http://httpie.org/
 ```
+
+### HTTP Prompt
+
+[HTTP Prompt](http://http-prompt.com) is an interactive command-line HTTP client featuring
+autocomplete and syntax highlighting.
+
+Installation:
+
+```sh
+sudo apt install python-pip
+pip install --user http-prompt
+# pip installs to ~/.local/bin/, but does not tell anyone.
+# check if this is part of your $PATH, e.g. for my fish setup:
+path
+add_path ~/.local/bin/
+```
+
+Usage (see the [user guide](http://docs.http-prompt.com/en/latest/user-guide.html#quickstart) for details):
+
+```sh
+$ http-prompt localhost:3001
+
+> cd /api/resource
+> get                             # sends HTTP request: GET /api/resource
+…                                 # response, paged and /w syntax highlighting
+
+> Content-Type:application/json   # set a header
+# set some body parameters as JSON:
+> number:=1234
+> is_ok:=true
+> names:=["foo","bar"]
+> user:='{"username": "foo", "password": "bar"}'
+> post                            # send the POST request with header and body
+```
+
+HTTP Prompt is using `httpie`, and you can preview the calls it will make with
+
+```sh
+> httpie post   # or any other HTTP verb
+```
+
+Note that headers, body data, etc. is persisted, so it will be included in every request.
+You can check the current environment with `env` and remove stuff with `rm`:
+
+```sh
+> env
+cd http://localhost:3001/api/stuff
+'jsondata:={"crazy": "object here"}'
+Content-Type:application/json
+> rm -h Content-Type              # remove that header
+> rm *                            # clear everything
+```
