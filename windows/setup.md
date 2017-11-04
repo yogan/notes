@@ -52,8 +52,11 @@ symlinks, hardlinks, junctions, etc.
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink`
 - create *hardlink* to `env/.inputrc` in `$HOME` (`c:/user/foo/`)
 - rename hardlinked `.inputrc` to `_inputrc`
-- edit shipped configuration: `C:\Program Files (x86)\clink\<VERSION>\clink_inputrc_base`
-- comment out those lines: `#M-h: show-rl-help`
+
+Those steps seem no longer necessary (check if the `meta+h` binding from `.inputrc` is working):
+
+- ~~edit shipped configuration: `C:\Program Files (x86)\clink\<VERSION>\clink_inputrc_base`~~
+- ~~comment out those lines: `#M-h: show-rl-help`~~
 
 ### ConsoleZ
 
