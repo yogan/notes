@@ -18,6 +18,10 @@
 
 * [Misc. stuff](linux/misc.md)
 
+## Tools
+
+* [Searching](tools/searching.md)
+
 ## Conference Notes
 
 * [SoCraTes 2017](conferences/socrates17.md)
