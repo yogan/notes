@@ -3,10 +3,11 @@
 ## Windows
 
 * [Setting up a fresh Windows machine](windows/setup.md)
+* [Auto run programs after logon](windows/autorun.md)
 * [Running PowerShell scripts](windows/powershell.md)
 * [Windows Subsystem for Linux (WSL)](windows/wsl.md)
 * [Fix Duplicate Pinned Taskbar Icons](windows/fix-duplicate-pinned-taskbar-icons.md)
-* [Fix Computer Waking up from Sleep](fix-wakeups-from-sleep.md)
+* [Fix Computer Waking up from Sleep](windows/fix-wakeups-from-sleep.md)
 
 ## Web Development
 
