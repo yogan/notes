@@ -55,7 +55,8 @@ After installation of Windows Fall Creators Update (v1709), wsl comes with a `ws
 Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199) and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
 
 * [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
-* symlink `env/.minttyrc` to `%APPDATA%\wsltty\config`
+* symlink `env/.minttyrc` to `%APPDATA%\mintty\config`
+  (the [wsltty docu](https://github.com/mintty/wsltty#mintty-settings) says that `%APPDATA%\wsltty\config` is used when it exists, but somehow this does currently not work)
   * delete shipped `%APPDATA%\wsltty\config` file
   * use `env` git from Windows home; symlink with Explorer/ShellExt
   * rename `.minttyrc` symlink to `config`
