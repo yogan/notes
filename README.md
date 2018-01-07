@@ -13,6 +13,7 @@
 
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
 * [JavaScript](webdev/javascript.md)
+* [HTML](webdev/html.md)
 * [HTTP](webdev/http.md)
 
 ## Linux
