@@ -10,3 +10,9 @@
 * [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
 * [HTML Canvas Deep Dive](https://joshondesign.com/p/books/canvasdeepdive/toc.html)
 * Free Udemy Course: [Code Your First Game](https://www.udemy.com/code-your-first-game)
+
+## Processing.js
+
+[Processing.js](http://processingjs.org/) is a port of the Processing Visualization Language, based on HTML Canvas.
+
+* nice [L-System example (CodePen)](https://codepen.io/anon/pen/WdBzjw), creating a space-filling curve
