@@ -87,3 +87,18 @@ Content-Type:application/json
 > rm -h Content-Type              # remove that header
 > rm *                            # clear everything
 ```
+
+### jq
+
+[jq](https://stedolan.github.io/jq/) is like `sed` for JSON data. 
+
+Can be used together with `curl` or `http` to filter out data from lengthy JSON results.
+Minimal example:
+
+```sh
+> http some.web-api.org/stuff
+{ "foo": "bar", "otherStuff": "i dont care for", ... }
+
+> http some.web-api.org/stuff | jq .foo
+"bar"
+```
