@@ -115,6 +115,21 @@ So for any shared data it is good practice to place them in some Windows directo
 below the Windows user home (`%userprofile%` → `C:\Users\<foo>`) access them from WSL via a symlink,
 e.g. `ln -s /mnt/c/Users/fbr/ winhome`.
 
+### Ownership and Permissions
+
+By default, the Windows filesystems mounted via DrvFs shows all files with `root:root` ownership.
+Permission bits are derived from the Windows FS attributes, but cannot be changed with `chmod`.
+Insider build 17063 introduces some enhancements, and limited support for `chmod`/`chown`.
+You have to remount the FS with the `metadata` option to enable it:
+
+```sh
+sudo umount /mnt/c
+sudo mount -t drvfs C: /mnt/c -o metadata
+```
+
+There are also mount options for `uid`/`gid` mappings, and `umask`/`fmask` to modify permissions.
+See the [blog post](https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/) for details.
+
 ### Launching Windows Applications
 
 Since [build 14965](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14965),
