@@ -18,6 +18,7 @@
 
 ## Linux
 
+* [fish](linux/fish.md)
 * [Misc. stuff](linux/misc.md)
 
 ## Tools
