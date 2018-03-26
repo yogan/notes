@@ -14,13 +14,13 @@
 * `./configure --prefix=$HOME/local`
 * `make -j && make install`
 * add `$HOME/local/bin/fish` to `/etc/shells`
-* chsh -s $HOME/local/bin/fish
+* `chsh -s $HOME/local/bin/fish`
 
 ### WSL
 
 * `./configure` *(it's fine to install globally)*
 * `make -j && sudo make install`
-* see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal) on how to launch WSL with a custom shell*
+* see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal) on how to launch WSL with a custom shell
 
 ## Setup oh-my-fish
 
