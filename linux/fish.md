@@ -1,13 +1,26 @@
 # fish Shell
 
+- [Documentation](https://fishshell.com/docs/current/index.html)
+- [GitHub page](https://github.com/fish-shell/fish-shell/)
+
 ## Build and Install from Source
 
 * `git clone git://github.com/fish-shell/fish-shell.git && cd fish-shell`
 * `sudo apt install autoconf automake build-essential libncurses5-dev gettext doxygen`
 * `autoreconf --no-recursive`
-* `./configure` *(normally I would add `--prefix=$HOME/local`, but for WSL it's fine to install globally)*
+
+### Linux
+
+* `./configure --prefix=$HOME/local`
+* `make -j && make install`
+* add `$HOME/local/bin/fish` to `/etc/shells`
+* chsh -s $HOME/local/bin/fish
+
+### WSL
+
+* `./configure` *(it's fine to install globally)*
 * `make -j && sudo make install`
-* *adding to `/etc/shells` and `chsh` are not needed/don't work on WSL*
+* see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal) on how to launch WSL with a custom shell*
 
 ## Setup oh-my-fish
 
