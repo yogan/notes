@@ -22,6 +22,21 @@
 * `make && sudo make install` *(maybe add `-j` to `make` if running on a juicy machine)*
 * see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal) on how to launch WSL with a custom shell
 
+## Get dotfiles ready
+
+* `cd ~/.config`
+* `ln -s ~/env/.config/fish`
+* `ln -s ~/env/.config/omf`
+
+## Setup $PATH / $fish_user_paths
+
+Path things are a bit weird in fish. You can add paths to a universal variable `fish_user_paths`,
+which then magically is persisted on the local machine, and also prepended to `PATH`. This actually
+works better then expected. I have two little convenience functions `path` (to print the values of
+the two variables) and `add_path` (to add e.g. `~/bin`, `~/.fzf/bin`, etc.)
+
+One thing to absolutely add is the path to the fish binary itself, i.e. `add_path $HOME/local/bin`.
+
 ## Setup oh-my-fish
 
 * `curl -L https://get.oh-my.fish | fish` (if you like to live dangerously, or [download and check](https://github.com/oh-my-fish/oh-my-fish#installation) the installer first)
@@ -37,10 +52,3 @@
   * `Do you want to enable key bindings?`  **`y`**
   * `Do you want to update your shell configuration files?` **`n`**
 * `omf reload`
-
-## $PATH / $fish_user_paths
-
-Path things are a bit weird in fish. You can add paths to a universal variable `fish_user_paths`,
-which then magically is persisted on the local machine, and also prepended to `PATH`. This actually
-works better then expected. I have two little convenience functions `path` (to print the values of
-the two variables) and `add_path` (to add e.g. `~/bin`, `~/.fzf/bin`, etc.)
