@@ -11,10 +11,11 @@
 
 ## Web Development
 
-* [Chrome Developer Tools](webdev/chrome-dev-tools.md)
-* [JavaScript](webdev/javascript.md)
-* [HTML](webdev/html.md)
 * [HTTP](webdev/http.md)
+* [HTML](webdev/html.md)
+* [JavaScript](webdev/javascript.md)
+* [Chrome Developer Tools](webdev/chrome-dev-tools.md)
+* [Online IDEs / Playgrounds](webdev/online-ides.md)
 
 ## Linux
 
