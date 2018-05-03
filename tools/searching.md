@@ -7,6 +7,11 @@ is an even faster alternative to `grep` then `ack` or `ag` (by giving up advance
 
 ### Installation
 
+#### Debian Package
+* download `.deb` from [GitHub releases](https://github.com/BurntSushi/ripgrep/releases)
+* `sudo dpkg -i ripgrep_0.8.1_amd64.deb`
+
+#### Manual
 * download pre-built tarball (`ripgrep-0.7.1-i686-unknown-linux-musl.tar.gz`) from [GitHub releases](https://github.com/BurntSushi/ripgrep/releases)
 * `xtract.sh ripgrep*tar.gz ; cd ripgrep*`
 * `cp rg ~/local/bin/`
