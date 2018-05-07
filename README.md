@@ -24,6 +24,7 @@
 
 ## Tools
 
+* [Graphics](tools/graphics.md)
 * [Searching](tools/searching.md)
 
 ## Conference Notes

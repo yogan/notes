@@ -87,10 +87,11 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 ### Graphics/Viewers
 
+- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) - `choco install sumatrapdf`
 - [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
 - [Greenshot](http://getgreenshot.org/de/) - `choco install greenshot`
 - [ScreenToGif](http://www.screentogif.com/) - `choco install screentogif`
-- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) - `choco install sumatrapdf`
+- also see [tools/graphics page](../tools/graphics.md)
 
 ## WSL
 
