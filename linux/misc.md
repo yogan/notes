@@ -1,5 +1,24 @@
 # Linux
 
+## progress - Coreutils Progress Viewer
+
+Nice command line tool to watch the progress of copy-like programs like
+`cp`, `mv`, `dd`, `gzip`, `cat`, etc. It works be scanning `/proc` and
+analyzing `fd` and `fdinfo` files for relevant processes.
+
+### Install
+
+* clone [GitHub repo](https://github.com/Xfennec/progress):
+  `git clone https://github.com/Xfennec/progress.git`
+* `make && make install`
+
+### Usage
+
+* top-like watcher mode: `progress -M` (will just magically detect
+  interesting processes and show their progress)
+* for other modes (restrict to process with PID or command names),
+  see `progress -h`
+
 ## Fonts
 
 ### Installing custom fonts
