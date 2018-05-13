@@ -4,6 +4,10 @@
     "editor.tabSize": 2,
     "cSpell.words": [
         "ASLR",
-        "Fahrplan"
+        "Fahrplan",
+        "dpkg",
+        "ripgrep",
+        "vimdiff",
+        "xtract"
     ]
 }
