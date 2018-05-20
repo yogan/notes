@@ -3,6 +3,7 @@
 ## Windows
 
 * [Setting up a fresh Windows machine](windows/setup.md)
+* [Tweaks](windows/tweaks.md)
 * [Auto run programs after logon](windows/autorun.md)
 * [Running PowerShell scripts](windows/powershell.md)
 * [Windows Subsystem for Linux (WSL)](windows/wsl.md)

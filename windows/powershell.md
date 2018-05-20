@@ -1,6 +1,7 @@
 # PowerShell: allow unsigned ps1 script to run
 
-Fun fact: enabling [Windows 10 Develeper Mode](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development) turns this on by default.
+Fun fact: enabling [Windows 10 Developer Mode](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development)
+turns this on by default.
 
 ## Current user only
 
