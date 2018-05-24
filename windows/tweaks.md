@@ -17,14 +17,25 @@ Some useful setting (as organized in UWT):
   in quick access, do *not* disable "frequent folder" in UWT, but rather:
   * explorer → context menu on "quick access" → options
   * disable "show recently used files" / "show freq. used folders"
-  * → only explicitly pinned directories are listed
-  * (also set "Open File Explorer to: This PC" here)
+  * → only explicitly pinned directories will be listed
+
+#### File Explorer
+
+* Tweak Drive Letters: "Before Labels"
+* "-Shortcut" Suffix for New Shortcuts → Remove
+* File Explorer Startup: "This PC"
 
 #### This PC
 
 * Customize Inbuilt Folders: disable all the crap (Desktop, 3D Objects, Music, …)
 
 ### Security & Privacy
+
+#### Security
+
+##### Windows
+
+* disable OneDrive
 
 #### Privacy
 
@@ -40,3 +51,7 @@ Some useful setting (as organized in UWT):
 ### Additional
 
 * disable "Use Autoplay for All Media and Devices"
+
+#### Network Tweaks
+
+* enable NTLM 2 support
