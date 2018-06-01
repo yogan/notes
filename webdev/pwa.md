@@ -42,6 +42,11 @@
   sources to improve load performance
 * needed to offer push notifications (see below)
 
+### App Shell
+
+* [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
+  on Google Developers Web Fundamentals
+
 ### Push Notifications
 
 * [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications/)
@@ -68,3 +73,14 @@
   * falls back to localStorage in Browsers without support for IndexedDB/WebSQL
   * [frameworks support](https://github.com/localForage/localForage#framework-support)
      for AngularJS, Angular ≥ 4, Backbone, Ember, and Vue
+
+### Hardware Access
+
+*Not really PWA-specific, but related.*
+
+* [MediaDevices API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices)
+  (access to cameras and microphones)
+* [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)
+* [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad)
+* [WebVR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API) *(experimental)*
+* [WebUSB API](https://developer.mozilla.org/en-US/docs/Web/API/USB) *(experimental)*
