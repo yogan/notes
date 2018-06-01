@@ -14,3 +14,57 @@
   comes with PWA support
 * [Progressifying an Angular 5 Application](https://medium.com/@nsmirnova/creating-pwa-with-angular-5-part-2-progressifying-the-application-449e3a706129)
   Medium article
+
+## PWA Technologies
+
+### Web App Manifest
+
+* [MDN: Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+* [Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
+  on Google Developers Web Fundamentals
+
+### Service Workers
+
+#### Documentation
+
+* [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
+  on Google Developers Web Fundamentals
+* Extensive [list of resources](https://jakearchibald.github.io/isserviceworkerready/resources.html#moar)
+  by Jake Archibald
+
+#### Quick Facts
+
+* requires HTTPS
+* cannot access the DOM
+* has a life-cycle consisting of registration, installation, and (de-)activation
+* can intercept network requests, so a major use-case for service workers is the
+  implementation of a cache, to enable offline functionality, and/or to pre-fetch
+  sources to improve load performance
+* needed to offer push notifications (see below)
+
+### Push Notifications
+
+* [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications/)
+  on Google Developers Web Fundamentals
+* based on service workers (they operate in the background)
+
+### Client-side Data Storage
+
+* [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API),
+  [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+  * synchronous, might be slow on some devices
+  * easy to use:
+    * `localStorage.setItem('myCat', 'Tom');`
+    * `var cat = localStorage.getItem('myCat');`
+    * `localStorage.removeItem('myCat');`
+* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  * low-level API, rather complicated
+  * transactional, SQL-like RDBMS (but object-oriented instead of fixed column tables)
+* [Web SQL](https://www.w3.org/TR/webdatabase/)
+  * *deprecated, W3C recommends to use Web Storage or IndexedDB*
+* [localForage](https://localforage.github.io/localForage/) JS lib
+  * asynchronous, with `localStorage`-like API
+  * uses IndexedDB or WebSQL internally (called "backend drivers")
+  * falls back to localStorage in Browsers without support for IndexedDB/WebSQL
+  * [frameworks support](https://github.com/localForage/localForage#framework-support)
+     for AngularJS, Angular ≥ 4, Backbone, Ember, and Vue
