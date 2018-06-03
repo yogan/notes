@@ -48,15 +48,18 @@
   sources to improve load performance
 * needed to offer push notifications (see below)
 
-### Caching
+### Offline
 
-* [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
-
-### Push Notifications
-
-* [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications/)
+* [The Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/)
   on Google Developers Web Fundamentals
-* based on service workers (they operate in the background)
+* [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+  * designed to save HTTP responses (in contrast to the more generic
+    IndexedDB/WebSQL APIs)
+  * works well in service workers
+  * not supported in IE, but neither are service workers, so ¯\\_(ツ)_/¯
+* [sw-precache](https://github.com/GoogleChromeLabs/sw-precache)
+  * node module to generate service worker code that will precache specific
+    resources so they work offline
 
 ### Client-side Data Storage
 
@@ -78,6 +81,12 @@
   * falls back to localStorage in Browsers without support for IndexedDB/WebSQL
   * [frameworks support](https://github.com/localForage/localForage#framework-support)
      for AngularJS, Angular ≥ 4, Backbone, Ember, and Vue
+
+### Push Notifications
+
+* [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications/)
+  on Google Developers Web Fundamentals
+* based on service workers (they operate in the background)
 
 ### Hardware Access
 
