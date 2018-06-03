@@ -56,7 +56,7 @@
   * designed to save HTTP responses (in contrast to the more generic
     IndexedDB/WebSQL APIs)
   * works well in service workers
-  * not supported in IE, but neither are service workers, so ¯\\_(ツ)_/¯
+  * not supported in IE, but neither are service workers, so ¯\\\_(ツ)\_/¯
 * [sw-precache](https://github.com/GoogleChromeLabs/sw-precache)
   * node module to generate service worker code that will precache specific
     resources so they work offline
