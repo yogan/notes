@@ -23,6 +23,11 @@
 * [Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
   on Google Developers Web Fundamentals
 
+### App Shell
+
+* [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
+  on Google Developers Web Fundamentals
+
 ### Service Workers
 
 #### Documentation
@@ -42,10 +47,9 @@
   sources to improve load performance
 * needed to offer push notifications (see below)
 
-### App Shell
+### Caching
 
-* [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
-  on Google Developers Web Fundamentals
+* [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
 ### Push Notifications
 
