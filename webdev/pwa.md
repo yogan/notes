@@ -5,6 +5,7 @@
 * Google Chrome Developers [PWA Roadshow YouTube playlist](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt&disable_polymer=true)
 * Google's [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist)
 * [Progressive Web Apps on the Desktop](https://developers.google.com/web/updates/2018/05/dpwa)
+* [Progressive Web Apps on MDN](https://developer.mozilla.org/en-US/Apps/Progressive)
 
 ## Frameworks / Generators
 
