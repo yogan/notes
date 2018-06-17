@@ -25,7 +25,7 @@
 [p5.js](https://p5js.org/) is JS library of the Processing language. 
 
 TL;DR difference between P5 and Processing.js (taken from
-[this article](https://www.sitepoint.com/processing-js-vs-p5-js-whats-difference/):
+[this article](https://www.sitepoint.com/processing-js-vs-p5-js-whats-difference/)):
 *"P5 is a direct JS port of the Processing language. Processing.js
 is a converter which interprets pure Processing code into JS on the fly. The
 latter requires you to learn Processing, but not JS, and vice versa."*
@@ -33,7 +33,7 @@ latter requires you to learn Processing, but not JS, and vice versa."*
 It seems to be the better option of the two.
 
 The book [Generative Design](http://www.generative-gestaltung.de/2/) has a
-bunch of p5.js examples
-([available on GitHub](https://github.com/generative-design/Code-Package-p5.js))
+bunch of nice p5.js examples, that are
+[available on GitHub](https://github.com/generative-design/Code-Package-p5.js),
 and runnable live in the [p5.js Web Editor](http://alpha.editor.p5js.org/).
 
