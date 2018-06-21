@@ -3,6 +3,9 @@
 ## General Resources
 
 * [HTML Spec (WHATWG)](https://tools.ietf.org/html/rfc7231)
+* [Emmet Cheat Sheet](https://docs.emmet.io/cheat-sheet/)
+  * works e.g. in VS Code
+  * cool abbreviations like `nav>ul>li` get expanded to HTML elements
 
 ## HTML Canvas
 
@@ -10,7 +13,6 @@
 * [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
 * [HTML Canvas Deep Dive](https://joshondesign.com/p/books/canvasdeepdive/toc.html)
 * Free Udemy Course: [Code Your First Game](https://www.udemy.com/code-your-first-game)
-
 
 ## Processing
 
@@ -22,7 +24,7 @@
 
 ### p5.js
 
-[p5.js](https://p5js.org/) is JS library of the Processing language. 
+[p5.js](https://p5js.org/) is JS library of the Processing language.
 
 TL;DR difference between P5 and Processing.js (taken from
 [this article](https://www.sitepoint.com/processing-js-vs-p5-js-whats-difference/)):
@@ -36,4 +38,3 @@ The book [Generative Design](http://www.generative-gestaltung.de/2/) has a
 bunch of nice p5.js examples, that are
 [available on GitHub](https://github.com/generative-design/Code-Package-p5.js),
 and runnable live in the [p5.js Web Editor](http://alpha.editor.p5js.org/).
-
