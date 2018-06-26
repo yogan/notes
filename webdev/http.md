@@ -102,3 +102,14 @@ Minimal example:
 > http some.web-api.org/stuff | jq .foo
 "bar"
 ```
+
+Dealing with arrays:
+
+```sh
+> http some.web-api.org/list
+[{ "foo": 1, "bar": "a" }, { "foo": 2, "bar": "b" }, ...]
+
+> http some.web-api.org/list | jq '.[] | .foo'
+1
+2
+```
