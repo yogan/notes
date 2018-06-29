@@ -15,4 +15,4 @@ Command line tool for animated GIFs ([Gifsicle website](http://www.lcdf.org/gifs
 
 Detailed article on how to produce
 [high quality GIFs with ffmpeg](http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html).
-TL;DR: use the proposed `gifenv.sh` (available in my `env/bin/`).
+TL;DR: use the proposed `gifenc.sh` (available in my `env/bin/`).
