@@ -2,27 +2,36 @@
 
 ## Resources
 
-* [List blog posts and Channel 9 videos of WSL internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
-* [Microsoft/BashOnWindows GitHub Issue Tracker](https://github.com/microsoft/bashonwindows)
-* [List of programs that work on WSL](https://github.com/ethanhs/WSL-Programs) / [Can I Subsystem It?](https://github.com/davatron5000/can-i-subsystem-it)
-* [Release Notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes) (updated with newer builds)
+* [List blog posts and Channel 9 videos of WSL
+  internals](https://blogs.msdn.microsoft.com/commandline/learn-about-bash-on-windows-subsystem-for-linux/)
+* [Microsoft/BashOnWindows GitHub Issue
+  Tracker](https://github.com/microsoft/bashonwindows)
+* [List of programs that work on WSL](https://github.com/ethanhs/WSL-Programs) /
+  [Can I Subsystem It?](https://github.com/davatron5000/can-i-subsystem-it)
+* [Release
+  Notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)
+  (updated with newer builds)
 
 ## Install
 
-* [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
+* [Installation
+  Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 * TL;DR:
   * enable Developer Mode (Settings → Update and Security → For developers)
-  * turn it on: Start → "turn feat" → "Turn Windows features on or off" → [x] WSL
+  * turn it on: Start → "turn feat" → "Turn Windows features on or off"
+    → [x] WSL
   * reboot when prompted
   * `cmd` → `bash` → let installer run
   * `cmd` → `bash` → create user/password
 
 ## Upgrade
 
-Initial WSL (released with Win 10 Annivery Update / v1607) shipped with Ubuntu 14.04 LTS (Trusty).
-With [WSL Build 14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
-(which itself is available since Windows 10 Creators Update / v1703)
-Ubuntu 16.04 LTS (Xenial) is [supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
+Initial WSL (released with Win 10 Annivery Update / v1607) shipped with Ubuntu
+14.04 LTS (Trusty). With [WSL Build
+14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
+(which itself is available since Windows 10 Creators Update / v1703) Ubuntu
+16.04 LTS (Xenial) is
+[supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
 but not automatically upgraded.
 
 To check versions:
@@ -32,77 +41,102 @@ To check versions:
 
 To upgrade an existing 14.04, you can either:
 
-* uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from `cmd` or PowerShell)
+* uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from
+  `cmd` or PowerShell)
 * upgrade in place: `sudo do-release-upgrade` (inside a running WSL shell)
 
-The later seems to work fine, just like upgrading a "real" Ubuntu/Debian installation. After the upgrade, a Windows reboot is needed.
+The later seems to work fine, just like upgrading a "real" Ubuntu/Debian
+installation. After the upgrade, a Windows reboot is needed.
 
 ## Post-Install
 
 * sudo apt-get update && sudo apt-get dist-upgrade
-* Make sure that the `umask` is set to `022`, which is not the case in the initial `bash` instance, otherwise cloned git repos (and everything else) have fucked up file/dir permissions!
+* Make sure that the `umask` is set to `022`, which is not the case in the
+  initial `bash` instance, otherwise cloned git repos (and everything else) have
+  fucked up file/dir permissions!
   * set in running shell with `umask 022`
   * also add to the top of the shipped WSL version of `~/.bashrc`
   * later in `fish` everything will be fine, as this is done by my config (`.config/fish/conf.d/env.fish`)
-* `git clone ssh://yogan@zogan.de/~yogan/git/priv/env` *(actually do this twice: once in the WSL home, and once in Windows home; reason: r/w from outside of WSL should not be done, see section "Interoperability", but to keep permissions and special file types like symlinks in the Linux world, just symlinking out of the WSL filesystem is also not possible)*
+* `git clone ssh://yogan@zogan.de/~yogan/git/priv/env` *(actually do this twice:
+  once in the WSL home, and once in Windows home; reason: r/w from outside of
+  WSL should not be done, see section "Interoperability", but to keep
+  permissions and special file types like symlinks in the Linux world, just
+  symlinking out of the WSL filesystem is also not possible)*
 * `./env/bin/symlink-env.sh`
 * `ssh-keygen`
 * build and install [fish](../linux/fish.md) (see instructions on [its own page](../linux/fish.md))
 
 ## Add mintty/wsltty as Terminal
 
-**TODO:**
-After installation of Windows Fall Creators Update (v1709), wsl comes with a `wsl.exe` that respects shell entries from `/etc/passwd`, so `chsh` should work. See if it really does, and replace the manual launch of fish below.
-Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199) and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
+**TODO:** After installation of Windows Fall Creators Update (v1709), wsl comes
+with a `wsl.exe` that respects shell entries from `/etc/passwd`, so `chsh`
+should work. See if it really does, and replace the manual launch of fish below.
+Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199)
+and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
 
 * [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
-* symlink `env/.minttyrc` to `%APPDATA%\mintty\config`
-  (the [wsltty docu](https://github.com/mintty/wsltty#mintty-settings) says that `%APPDATA%\wsltty\config` is used when it exists, but somehow this does currently not work)
+* symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (the [wsltty
+  docu](https://github.com/mintty/wsltty#mintty-settings) says that
+  `%APPDATA%\wsltty\config` is used when it exists, but somehow this does
+  currently not work)
   * delete shipped `%APPDATA%\wsltty\config` file
   * use `env` git from Windows home; symlink with Explorer/ShellExt
   * rename `.minttyrc` symlink to `config`
-* copy *"WSL ~ in Mintty"* shortcut in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\WSLtty`, rename to *"WSL fish"*
+* copy *"WSL ~ in Mintty"* shortcut in `%APPDATA%\Microsoft\Windows\Start
+  Menu\Programs\WSLtty`, rename to *"WSL fish"*
 * adapt target of shortcut to use `fish` instead of `bash`:
-  * `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -h err --configdir="%APPDATA%\wsltty"` *`-o FontHeight=12`* `/bin/wslbridge -C~ -t /usr/local/bin/fish`
-  * `-o LOCALE=C -o Charset=UTF-8` from shipped wsltty shortcut can be removed, they are present in my symlinked `.minttyrc` anyway
-  * `-o FontHeight` *`NUM`* can be added when needed to override the value from the config file
-* font: install "DejaVu Sans Mono Nerd Font" from [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases) (unzip, install `"* Mono Windows Compatible.ttf"`)
+  * `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -h err
+    --configdir="%APPDATA%\wsltty"` *`-o FontHeight=12`* `/bin/wslbridge -C~ -t
+    /usr/local/bin/fish`
+  * `-o LOCALE=C -o Charset=UTF-8` from shipped wsltty shortcut can be removed,
+    they are present in my symlinked `.minttyrc` anyway
+  * `-o FontHeight` *`NUM`* can be added when needed to override the value from
+    the config file
+* font: install "DejaVu Sans Mono Nerd Font" from [NerdFonts
+  repo](https://github.com/ryanoasis/nerd-fonts/releases) (unzip, install `"*
+  Mono Windows Compatible.ttf"`)
 * eye candy: use icon from `env/icons/fish-terminal.ico`
 
 ## Interoperability
 
 ### Filesystem
 
-The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and
-[*should not* be modified](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and [*should not* be
+modified](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 by Windows applications. The Windows filesystems ("drives") are mounted below
 `/mnt/{c,d,...}` under WSL and *can* be modified from Linux applications.
 
-So for any shared data it is good practice to place them in some Windows directory, e.g. somewhere
-below the Windows user home (`%userprofile%` → `C:\Users\<foo>`) access them from WSL via a symlink,
-e.g. `ln -s /mnt/c/Users/fbr/ winhome`.
+So for any shared data it is good practice to place them in some Windows
+directory, e.g. somewhere below the Windows user home (`%userprofile%` →
+`C:\Users\<foo>`) access them from WSL via a symlink, e.g. `ln -s
+/mnt/c/Users/fbr/ winhome`.
 
 ### Ownership and Permissions
 
-By default, the Windows filesystems mounted via DrvFs shows all files with `root:root` ownership.
-Permission bits are derived from the Windows FS attributes, but cannot be changed with `chmod`.
-Insider build 17063 introduces some enhancements, and limited support for `chmod`/`chown`.
-You have to remount the FS with the `metadata` option to enable it:
+By default, the Windows filesystems mounted via DrvFs shows all files with
+`root:root` ownership. Permission bits are derived from the Windows FS
+attributes, but cannot be changed with `chmod`. Insider build 17063 introduces
+some enhancements, and limited support for `chmod`/`chown`. You have to remount
+the FS with the `metadata` option to enable it:
 
 ```sh
 sudo umount /mnt/c
 sudo mount -t drvfs C: /mnt/c -o metadata
 ```
 
-There are also mount options for `uid`/`gid` mappings, and `umask`/`fmask` to modify permissions.
-See the [blog post](https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/) for details.
+There are also mount options for `uid`/`gid` mappings, and `umask`/`fmask` to
+modify permissions. See the [blog
+post](https://blogs.msdn.microsoft.com/commandline/2018/01/12/chmod-chown-wsl-improvements/)
+for details.
 
 ### Launching Windows Applications
 
-Since [build 14965](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14965),
-Windows applications can be easily launched from a WSL shell, as the NT user path is by default
-appended to the Linux `$PATH`. Just try something like `notepad.exe` or even go nuts and do `cmd.exe`.
+Since [build
+14965](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14965),
+Windows applications can be easily launched from a WSL shell, as the NT user
+path is by default appended to the Linux `$PATH`. Just try something like
+`notepad.exe` or even go nuts and do `cmd.exe`.
 
-The current (Linux) working directory is translated and passed to the Windows application, as long as
-it is something below `/mnt/`; otherwise a warning will be printed. So you can e.g. start VS Code in
-the current directory with `code .`
+The current (Linux) working directory is translated and passed to the Windows
+application, as long as it is something below `/mnt/`; otherwise a warning will
+be printed. So you can e.g. start VS Code in the current directory with `code .`

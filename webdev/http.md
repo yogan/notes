@@ -2,7 +2,8 @@
 
 ## Resources
 
-* [Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content](https://tools.ietf.org/html/rfc7231)
+* [Hypertext Transfer Protocol (HTTP/1.1): Semantics and
+  Content](https://tools.ietf.org/html/rfc7231)
   * [4.1 Request Methods](https://tools.ietf.org/html/rfc7231#section-4.1)
   * [6. Response Status Codes](https://tools.ietf.org/html/rfc7231#section-6)
 * [HTTP Status Codes](https://httpstatuses.com/)
@@ -11,9 +12,11 @@
 
 ### HTTPie
 
-[HTTPie](https://httpie.org/) is a better `curl`. Read the [documentation](https://httpie.org/doc).
+[HTTPie](https://httpie.org/) is a better `curl`. Read the
+[documentation](https://httpie.org/doc).
 
-Simple GET or DELETE requests (`http://` is optional, and for `localhost`, even the hostname is):
+Simple GET or DELETE requests (`http://` is optional, and for `localhost`, even
+the hostname is):
 
 ```sh
 http get http://localhost:3001/api/stuff
@@ -38,8 +41,8 @@ http example.org \
 
 ### HTTP Prompt
 
-[HTTP Prompt](http://http-prompt.com) is an interactive command-line HTTP client featuring
-autocomplete and syntax highlighting.
+[HTTP Prompt](http://http-prompt.com) is an interactive command-line HTTP client
+featuring autocomplete and syntax highlighting.
 
 Installation:
 
@@ -52,7 +55,9 @@ path
 add_path ~/.local/bin/
 ```
 
-Usage (see the [user guide](http://docs.http-prompt.com/en/latest/user-guide.html#quickstart) for details):
+Usage (see the [user
+guide](http://docs.http-prompt.com/en/latest/user-guide.html#quickstart) for
+details):
 
 ```sh
 $ http-prompt localhost:3001
@@ -76,8 +81,9 @@ HTTP Prompt is using `httpie`, and you can preview the calls it will make with
 > httpie post   # or any other HTTP verb
 ```
 
-Note that headers, body data, etc. is persisted, so it will be included in every request.
-You can check the current environment with `env` and remove stuff with `rm`:
+Note that headers, body data, etc. is persisted, so it will be included in every
+request. You can check the current environment with `env` and remove stuff with
+`rm`:
 
 ```sh
 > env
@@ -90,10 +96,10 @@ Content-Type:application/json
 
 ### jq
 
-[jq](https://stedolan.github.io/jq/) is like `sed` for JSON data. 
+[jq](https://stedolan.github.io/jq/) is like `sed` for JSON data.
 
-Can be used together with `curl` or `http` to filter out data from lengthy JSON results.
-Minimal example:
+Can be used together with `curl` or `http` to filter out data from lengthy JSON
+results. Minimal example:
 
 ```sh
 > http some.web-api.org/stuff

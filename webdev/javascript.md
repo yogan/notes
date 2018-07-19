@@ -2,8 +2,10 @@
 
 ## Resources
 
-* [Modern JS Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet#table-of-contents)
-* [Understanding JavaScript Function Invocation and "this"](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
+* [Modern JS
+  Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet#table-of-contents)
+* [Understanding JavaScript Function Invocation and
+  "this"](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
   by Yehuda Katz
 
 ## Testing
@@ -12,7 +14,6 @@
 
 * [Jest docs: expect](https://facebook.github.io/jest/docs/en/expect.html)
 * [Jest cheat sheet](https://devhints.io/jest)
-
 
 ## Lil' Bits
 

@@ -38,7 +38,8 @@ List installed fonts
 
 ### Using patched NerdFonts with urxvt
 
-* download "DejaVu Sans Mono Nerd Font" from [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases)
+* download "DejaVu Sans Mono Nerd Font" from [NerdFonts
+  repo](https://github.com/ryanoasis/nerd-fonts/releases)
 * `cp *Mono.ttf ~/.local/share/fonts/NerdFonts/`
 * `vim ~/.Xdefaults`
 

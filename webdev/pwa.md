@@ -44,8 +44,8 @@
 * cannot access the DOM
 * has a life-cycle consisting of registration, installation, and (de-)activation
 * can intercept network requests, so a major use-case for service workers is the
-  implementation of a cache, to enable offline functionality, and/or to pre-fetch
-  sources to improve load performance
+  implementation of a cache, to enable offline functionality, and/or to
+  pre-fetch sources to improve load performance
 * needed to offer push notifications (see below)
 
 ### Offline
@@ -72,7 +72,8 @@
     * `localStorage.removeItem('myCat');`
 * [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
   * low-level API, rather complicated
-  * transactional, SQL-like RDBMS (but object-oriented instead of fixed column tables)
+  * transactional, SQL-like RDBMS (but object-oriented instead of fixed column
+    tables)
 * [Web SQL](https://www.w3.org/TR/webdatabase/)
   * *deprecated, W3C recommends to use Web Storage or IndexedDB*
 * [localForage](https://localforage.github.io/localForage/) JS lib
@@ -96,5 +97,7 @@
   (access to cameras and microphones)
 * [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)
 * [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad)
-* [WebVR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API) *(experimental)*
-* [WebUSB API](https://developer.mozilla.org/en-US/docs/Web/API/USB) *(experimental)*
+* [WebVR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API)
+  *(experimental)*
+* [WebUSB API](https://developer.mozilla.org/en-US/docs/Web/API/USB)
+  *(experimental)*

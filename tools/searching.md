@@ -2,15 +2,16 @@
 
 ## ripgrep (`rg`)
 
-[ripgrep](https://github.com/BurntSushi/ripgrep)
-is an even faster alternative to `grep` then `ack` or `ag` (by giving up advanced
-regex features like look-behind).
+[ripgrep](https://github.com/BurntSushi/ripgrep) is an even faster alternative
+to `grep` then `ack` or `ag` (by giving up advanced regex features like
+look-behind).
 
 ### Installation
 
 #### Debian Package
 
-* download `.deb` from [GitHub releases](https://github.com/BurntSushi/ripgrep/releases)
+* download `.deb` from [GitHub
+  releases](https://github.com/BurntSushi/ripgrep/releases)
 * `sudo dpkg -i ripgrep_0.8.1_amd64.deb`
 
 #### Manual
@@ -48,4 +49,5 @@ and install with `sudo dpkg -i *.deb` (works just fine on WLS).
 
 ### Usage
 
-See `fd -h` or the great [examples on GitHub](https://github.com/sharkdp/fd#tutorial).
+See `fd -h` or the great [examples on
+GitHub](https://github.com/sharkdp/fd#tutorial).
