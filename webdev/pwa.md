@@ -23,6 +23,10 @@
 * [MDN: Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 * [Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
   on Google Developers Web Fundamentals
+* Add to Home Screen (A2HS)
+  * ["Add to Home Screen" criteria](https://developers.google.com/web/fundamentals/app-install-banners/#criteria)
+  * A2HS relevant [changes in
+    Chrome 86](https://developers.google.com/web/updates/2018/06/a2hs-updates)
 
 ### App Shell
 
