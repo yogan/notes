@@ -101,3 +101,14 @@ Tracker stuff shown by [eBrnd](https://twitter.com/eBrnd):
 * review outcome
 * can be too much at first (too many experiments at once), makes sense to have
   a limit (e.g. "3 experiments per sprint")
+
+### Quantum Computing
+
+* Microsoft's
+ [Quantum Development Kit](https://www.microsoft.com/en-us/quantum/development-kit)
+  * brings Q#, .NET based language
+  * simulated quantum operations (gates) and qbits
+* [IBM Q](https://quantumexperience.ng.bluemix.net/qx/editor)
+  * web based, graphic editor for qbits and gates
+  * can simulate or be run on a real quantum computer
+  * you will get notified when results are in
