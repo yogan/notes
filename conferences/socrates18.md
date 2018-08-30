@@ -3,6 +3,7 @@
 ## Meta
 
 * [List of Resources by dcarral](https://github.com/dcarral/socrates2018-resources)
+* [Blog post by Katja](https://www.katjasays.com/socrates-conference-2018-germany/)
 
 ## Sessions
 
@@ -40,7 +41,7 @@ Tracker stuff shown by [eBrnd](https://twitter.com/eBrnd):
 
 ### Modern Frontend CSS and JS
 
-* by Yulia Startsev (Mozilla)
+* Session by Yulia Startsev (Mozilla)
 * WebComponents - for fallback, Polymer can be used
 * links as shared in Slack by Yulia:
   * [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
@@ -51,7 +52,7 @@ Tracker stuff shown by [eBrnd](https://twitter.com/eBrnd):
 
 ### Switching your "JS" Backend
 
-* by Michelle
+* Session by Michelle
 * [Nest](https://docs.nestjs.com/): node.js based server-side apps with TypeScript
 * Swagger (opt-in)
 * GraphQL, etc.
@@ -69,3 +70,34 @@ Tracker stuff shown by [eBrnd](https://twitter.com/eBrnd):
 ### Unknown Codebase Quality
 
 * [CodeCharta example](https://maibornwolff.github.io/codecharta/visualization/app/index.html?file=codecharta.cc.json)
+
+### Non-Violent Communication
+
+#### Four Components
+
+* Observation (≠ judgement)
+  * Person talking loud vs. he is angry
+* Feelings (≠ thoughts)
+* Needs (≠ strategies)
+* Request (≠ demand)
+  * Should be doable, concrete, present ("SMART")
+  * Can also be request for feedback ("I opened myself, can you repeat it back
+    to see if we have a common understanding")
+
+#### Resources
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Nonviolent_Communication)
+* Marshall Rosenberg, "Nonviolent Communication: A Language of Life"
+* also good YT videos by him
+* Nancy Kline: "Time & Think"
+
+### Popcorn Flow
+
+* Session by [@dmn1k](https://twitter.com/dmn1k)
+* collect problems & observations (e.g. after daily)
+* options; rule of three (single option is bad)
+* make experiments with defined end date and expected outcome; remind each other
+  (e.g. "why are you working alone, we wanted to do pairing only?")
+* review outcome
+* can be too much at first (too many experiments at once), makes sense to have
+  a limit (e.g. "3 experiments per sprint")
