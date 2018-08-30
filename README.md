@@ -35,6 +35,7 @@
 
 * [SoCraTes 2017](conferences/socrates17.md)
 * [34C3 (2017)](conferences/34c3.md)
+* [SoCraTes 2018](conferences/socrates18.md)
 
 ## License
 
