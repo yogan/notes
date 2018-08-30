@@ -3,7 +3,8 @@
 ## Meta
 
 * [List of Resources by dcarral](https://github.com/dcarral/socrates2018-resources)
-* [Blog post by Katja](https://www.katjasays.com/socrates-conference-2018-germany/)
+* [Blog post by Katja](https://www.katjasays.com/socrates-conference-2018-germany)
+* [Blog post by Gabriel](http://lebenplusplus.de/2018/08/28/notes-and-impressions-from-socrates-2018)
 
 ## Sessions
 
