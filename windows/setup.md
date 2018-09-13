@@ -81,6 +81,10 @@ Settings are stored in `%APPDATA%\Console`, e.g.
   `choco install procexp`
 - [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) -
   `choco install AutoRuns`
+- [Rufus](http://rufus.akeo.ie) create bootable USB drives from `.iso` images
+  (like with `dd` on Linux) `choco install rufus` (note: `rufus.exe` can be
+  found in `C:\ProgramData\chocolatey\bin`, it does not get added to the start
+  menu automatically by choco)
 
 ## Applications
 
