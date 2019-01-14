@@ -1,5 +1,13 @@
 # Linux
 
+## bat - cat Replacement
+
+`bat` works like `cat`, but adds some comfort features like syntax
+highlighting, automatic paging, and a git diff column.
+
+* install latest `*_amd64.deb` from
+  [GitHub releases](https://github.com/sharkdp/bat/releases)
+
 ## progress - Coreutils Progress Viewer
 
 Nice command line tool to watch the progress of copy-like programs like
