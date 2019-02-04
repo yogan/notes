@@ -29,7 +29,7 @@
 ## Tools
 
 * [Graphics](tools/graphics.md)
-* [Searching](tools/searching.md)
+* [Searching / File Listing](tools/searching.md)
 
 ## Conference Notes
 

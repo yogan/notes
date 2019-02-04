@@ -1,4 +1,4 @@
-# Searching
+# Searching / File Listing
 
 ## ripgrep (`rg`)
 
@@ -51,3 +51,13 @@ and install with `sudo dpkg -i *.deb` (works just fine on WLS).
 
 See `fd -h` or the great [examples on
 GitHub](https://github.com/sharkdp/fd#tutorial).
+
+## LSD (LSDeluxe)
+
+[LSD](https://github.com/Peltoche/lsd) is an alternative to `ls` that
+adds colors and file type icons (via Nerd Font).
+
+* grab `*_amd64.deb` from the
+  [LSD releases](https://github.com/Peltoche/lsd/releases)
+* `sudo dpkg -i lsd*.deb`
+
