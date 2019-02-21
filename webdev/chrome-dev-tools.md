@@ -2,6 +2,24 @@
 
 ## Console
 
+### Retrieving DOM Elements
+
+Use `$$('css-selector')`
+([$$()](https://developers.google.com/web/tools/chrome-devtools/console/utilities#queryselectorall)
+is equivalent to
+[document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)).
+
+This API returns an array, where you can easily call `.map()` on, etc.
+(in contrast to e.g. `document.getElementsByClassName()`, which returns an
+`HTMLCollection`, for which iterating
+[is possible](https://stackoverflow.com/a/22754453), but a pain in the butt.)
+
+Example usage:
+
+```js
+$$('h2').map(el => el.textContent);    // get all h2 headline texts
+```
+
 ### Negative filter (remove some entries)
 
 Since Chrome 62 (see [What's New in DevTools
