@@ -5,24 +5,39 @@
 
 ## Build and Install from Source
 
-* `git clone git://github.com/fish-shell/fish-shell.git && cd fish-shell`
-* `sudo apt install autoconf automake build-essential libncurses5-dev gettext doxygen`
+### Get Source
+
+* get tarball from [GitHub Releases](https://github.com/fish-shell/fish-shell/releases)
+* `sudo apt install build-essential cmake ncurses-dev libncurses5-dev libpcre2-dev gettext`
+
+### Configure with CMake
+
+Preferred, but needs CMake ≥ 3.2 (not in Debian Jessie).
+
+* `mkdir build ; cd build`
+* `cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ..`
+  * prefix optional, depending on where you want to have fish installed to
+
+### Configure with autotools
+
 * `autoreconf --no-recursive`
-
-### Linux
-
+  * if building from Git
 * `./configure --prefix=$HOME/local`
-* `make && make install` *(maybe add `-j` to `make` if running on a juicy machine)*
-* add `$HOME/local/bin/fish` to `/etc/shells`
-* `chsh -s $HOME/local/bin/fish`
+  * prefix optional, depending on where you want to have fish installed to
 
-### WSL
+### Build and Install
 
-* `./configure` *(it's fine to install globally)*
-* `make && sudo make install` *(maybe add `-j` to `make` if running on a juicy machine)*
-* see [terminal section on WSL
-  page](../windows/wsl.md#add-minttywsltty-as-terminal) on how to launch WSL
-  with a custom shell
+* `make && make install`
+  * maybe add `-j` to `make` if running on a juicy machine
+  * `make install` might need `sudo`, depending on the configured install target dir
+
+## Set fish as default user shell
+
+* Linux:
+  * add `$HOME/local/bin/fish` to `/etc/shells`
+  * `chsh -s $HOME/local/bin/fish`
+* WSL: see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal)
+  on how to launch WSL with a custom shell
 
 ## Get dotfiles ready
 
