@@ -26,7 +26,7 @@
 
 ## Upgrade
 
-Initial WSL (released with Win 10 Annivery Update / v1607) shipped with Ubuntu
+Initial WSL (released with Win 10 Anniversary Update / v1607) shipped with Ubuntu
 14.04 LTS (Trusty). With [WSL Build
 14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
 (which itself is available since Windows 10 Creators Update / v1703) Ubuntu
@@ -101,15 +101,18 @@ and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
 
 ### Filesystem
 
-The WSL filesystem root is located in `%LOCALAPPDATA%\LXSS` and [*should not* be
-modified](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
-by Windows applications. The Windows filesystems ("drives") are mounted below
-`/mnt/{c,d,...}` under WSL and *can* be modified from Linux applications.
+Since Win 10 1903, you
+[can access Linux file from Windows](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/)
+via a 9P based file server, which makes the files of a WSL distro available
+under `\\wsl$\DISTRO\…`.
 
-So for any shared data it is good practice to place them in some Windows
-directory, e.g. somewhere below the Windows user home (`%userprofile%` →
-`C:\Users\<foo>`) access them from WSL via a symlink, e.g. `ln -s
-/mnt/c/Users/fbr/ winhome`.
+The
+[old warning](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+that you should never access Linux files via AppData (`%LOCALAPPDATA%\LXSS`)
+however, still applies.
+
+It might still be convenient to place some symlinks to Windows directories,
+e.g. `ln -s /mnt/c/Users/fbr/ winhome`.
 
 ### Ownership and Permissions
 
