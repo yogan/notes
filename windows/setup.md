@@ -29,7 +29,7 @@ List and upgrade locally installed packages.
 
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
   `choco install GoogleChrome`
-- [Dropbox](http://www.dropbox.com) - `choco install dropbox`, get `keepass.db`
+- [Google Drive](https://www.google.com/drive/download/)
 - [Keepass](http://keepass.info/) - `choco install keepass`
 
 ## Keyboard
