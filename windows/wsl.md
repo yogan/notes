@@ -50,7 +50,7 @@ installation. After the upgrade, a Windows reboot is needed.
 
 ## Post-Install
 
-* sudo apt-get update && sudo apt-get dist-upgrade
+* `sudo apt-get update && sudo apt-get dist-upgrade`
 * Make sure that the `umask` is set to `022`, which is not the case in the
   initial `bash` instance, otherwise cloned git repos (and everything else) have
   fucked up file/dir permissions!
