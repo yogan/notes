@@ -21,8 +21,8 @@
   * turn it on: Start → "turn feat" → "Turn Windows features on or off"
     → [x] WSL
   * reboot when prompted
-  * `cmd` → `bash` → let installer run
-  * `cmd` → `bash` → create user/password
+  * download a [Distro from the Windows Store](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice)
+  * launch Distro, wait for install to finish, create Linux user/password
 
 ## Upgrade
 
