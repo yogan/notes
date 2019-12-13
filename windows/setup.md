@@ -99,7 +99,7 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 ### Spotify
 
 - [Spotify](https://www.spotify.com/de/download/windows/) *(self-updating, so use installer instead of choco)*
-- [Toastify](https://toastify.codeplex.com/) - `choco install toastify` - global
+- [Toastify](https://github.com/aleab/toastify/releases) - global
   keyboard shortcuts and notifications
 
 ### Graphics/Viewers
