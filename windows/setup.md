@@ -98,7 +98,7 @@ Settings are stored in `%APPDATA%\Console`, e.g.
 
 ### Spotify
 
-- [Spotify](https://www.spotify.com) - `choco install spotify`
+- [Spotify](https://www.spotify.com/de/download/windows/) *(self-updating, so use installer instead of choco)*
 - [Toastify](https://toastify.codeplex.com/) - `choco install toastify` - global
   keyboard shortcuts and notifications
 
