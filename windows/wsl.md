@@ -42,36 +42,23 @@
 * `ssh-keygen`
 * build and install [fish](../linux/fish.md) (see instructions on [its own page](../linux/fish.md))
 
-## Add mintty/wsltty as Terminal
-
-**TODO:** After installation of Windows Fall Creators Update (v1709), wsl comes
-with a `wsl.exe` that respects shell entries from `/etc/passwd`, so `chsh`
-should work. See if it really does, and replace the manual launch of fish below.
-Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199)
-and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
+## Add wsltty as Terminal
 
 * [wsltty@GitHub](https://github.com/mintty/wsltty) `choco install wsltty`
-* symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (the [wsltty
-  docu](https://github.com/mintty/wsltty#mintty-settings) says that
-  `%APPDATA%\wsltty\config` is used when it exists, but somehow this does
-  currently not work)
-  * delete shipped `%APPDATA%\wsltty\config` file
-  * use `env` git from Windows home; symlink with Explorer/ShellExt
-  * rename `.minttyrc` symlink to `config`
-* copy *"WSL ~ in Mintty"* shortcut in `%APPDATA%\Microsoft\Windows\Start
-  Menu\Programs\WSLtty`, rename to *"WSL fish"*
-* adapt target of shortcut to use `fish` instead of `bash`:
-  * `%LOCALAPPDATA%\wsltty\bin\mintty.exe --wsl -h err
-    --configdir="%APPDATA%\wsltty"` *`-o FontHeight=12`* `/bin/wslbridge -C~ -t
-    /usr/local/bin/fish`
-  * `-o LOCALE=C -o Charset=UTF-8` from shipped wsltty shortcut can be removed,
-    they are present in my symlinked `.minttyrc` anyway
-  * `-o FontHeight` *`NUM`* can be added when needed to override the value from
-    the config file
-* font: install "DejaVu Sans Mono Nerd Font" from [NerdFonts
-  repo](https://github.com/ryanoasis/nerd-fonts/releases) (unzip, install `"*
-  Mono Windows Compatible.ttf"`)
-* eye candy: use icon from `env/icons/fish-terminal.ico`
+* run "WSL Generate Shortcuts" (should be in Start Menu, if not, try re-installing wsltty)
+* Start Menu → WSL Terminal → *right click* → more → Open file location → Properties → Run: *Maximized*
+* Start Menu → WSL Terminal → *right click* → more → Pin to taskbar
+* Explorer → `%APPDATA%\wsltty\config`
+  * delete `config` (it's empty, besides a comment)
+  * create `%APPDATA%\mintty\`
+  * symlink (Shell Ext.) `.minttyrc` from env git repo (Windows) to `mintty\`
+  * rename `.minttyrc` to `config`
+* font: install "DejaVu Sans Mono Nerd Font" from
+ [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases)
+ (unzip, install `"* Mono Windows Compatible.ttf"`)
+* optionally, some tweaks via properties of shortcut:
+  * `-o FontHeight` *`NUM`* can be added to override font size from config file
+  * use icon from `env/icons/fish-terminal.ico`
 
 ## Interoperability
 
