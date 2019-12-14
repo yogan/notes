@@ -57,7 +57,7 @@
  [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases)
  (unzip, install `"* Mono Windows Compatible.ttf"`)
 * optionally, some tweaks via properties of shortcut:
-  * `-o FontHeight` *`NUM`* can be added to override font size from config file
+  * `-o FontHeight=NUM`* can be added to override font size from config file
   * use icon from `env/icons/fish-terminal.ico`
 
 ## Interoperability
