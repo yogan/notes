@@ -24,30 +24,6 @@
   * download a [Distro from the Windows Store](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice)
   * launch Distro, wait for install to finish, create Linux user/password
 
-## Upgrade
-
-Initial WSL (released with Win 10 Anniversary Update / v1607) shipped with Ubuntu
-14.04 LTS (Trusty). With [WSL Build
-14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
-(which itself is available since Windows 10 Creators Update / v1703) Ubuntu
-16.04 LTS (Xenial) is
-[supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
-but not automatically upgraded.
-
-To check versions:
-
-* Windows: `winver.exe`
-* WSL/Ubuntu: `lsb_release -a`
-
-To upgrade an existing 14.04, you can either:
-
-* uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from
-  `cmd` or PowerShell)
-* upgrade in place: `sudo do-release-upgrade` (inside a running WSL shell)
-
-The later seems to work fine, just like upgrading a "real" Ubuntu/Debian
-installation. After the upgrade, a Windows reboot is needed.
-
 ## Post-Install
 
 * `sudo apt-get update && sudo apt-get dist-upgrade`
@@ -143,3 +119,27 @@ path is by default appended to the Linux `$PATH`. Just try something like
 The current (Linux) working directory is translated and passed to the Windows
 application, as long as it is something below `/mnt/`; otherwise a warning will
 be printed. So you can e.g. start VS Code in the current directory with `code .`
+
+## Upgrade
+
+Initial WSL (released with Win 10 Anniversary Update / v1607) shipped with Ubuntu
+14.04 LTS (Trusty). With [WSL Build
+14951](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14951)
+(which itself is available since Windows 10 Creators Update / v1703) Ubuntu
+16.04 LTS (Xenial) is
+[supported](https://blogs.msdn.microsoft.com/commandline/2016/10/19/wsl-adds-ubuntu-16-04-xenial-support/),
+but not automatically upgraded.
+
+To check versions:
+
+* Windows: `winver.exe`
+* WSL/Ubuntu: `lsb_release -a`
+
+To upgrade an existing 14.04, you can either:
+
+* uninstall/reinstall: `lxrun /uninstall /full /y` / `lxrun /install` (from
+  `cmd` or PowerShell)
+* upgrade in place: `sudo do-release-upgrade` (inside a running WSL shell)
+
+The later seems to work fine, just like upgrading a "real" Ubuntu/Debian
+installation. After the upgrade, a Windows reboot is needed.
