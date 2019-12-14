@@ -33,11 +33,8 @@ Preferred, but needs CMake ≥ 3.2 (not in Debian Jessie).
 
 ## Set fish as default user shell
 
-* Linux:
-  * add `$HOME/local/bin/fish` to `/etc/shells`
-  * `chsh -s $HOME/local/bin/fish`
-* WSL: see [terminal section on WSL page](../windows/wsl.md#add-minttywsltty-as-terminal)
-  on how to launch WSL with a custom shell
+* `sudo sh -c 'echo $(which fish) >> /etc/shell`
+* `chsh -s $(which fish)`
 
 ## Get dotfiles ready
 
