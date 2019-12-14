@@ -74,7 +74,7 @@ should work. See if it really does, and replace the manual launch of fish below.
 Also see [GH Issue 2199](https://github.com/Microsoft/BashOnWindows/issues/2199)
 and [GH Issue 2510](https://github.com/Microsoft/BashOnWindows/issues/2510).
 
-* [wsltty@GitHub](https://github.com/mintty/wsltty), use installer
+* [wsltty@GitHub](https://github.com/mintty/wsltty) `choco install wsltty`
 * symlink `env/.minttyrc` to `%APPDATA%\mintty\config` (the [wsltty
   docu](https://github.com/mintty/wsltty#mintty-settings) says that
   `%APPDATA%\wsltty\config` is used when it exists, but somehow this does
