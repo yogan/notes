@@ -8,6 +8,7 @@
   `cmd` or `PowerShell`)
 - `choco` should be in `%PATH%` after installation
   - ProTip™: use `which` npm package (`npm install -g which`)
+- Run all future `choco` commands as admin
 - `choco feature enable -n=allowGlobalConfirmation`
 
 ### Usage
