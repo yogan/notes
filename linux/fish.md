@@ -12,17 +12,8 @@
 
 ### Configure with CMake
 
-Preferred, but needs CMake ≥ 3.2 (not in Debian Jessie).
-
 * `mkdir build ; cd build`
 * `cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local ..`
-  * prefix optional, depending on where you want to have fish installed to
-
-### Configure with autotools
-
-* `autoreconf --no-recursive`
-  * if building from Git
-* `./configure --prefix=$HOME/local`
   * prefix optional, depending on where you want to have fish installed to
 
 ### Build and Install
