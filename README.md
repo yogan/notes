@@ -28,6 +28,7 @@
 
 ## Tools
 
+* [Audio / Video](tools/audio_video.md)
 * [Graphics](tools/graphics.md)
 * [Searching / File Listing](tools/searching.md)
 
