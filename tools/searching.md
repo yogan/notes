@@ -45,7 +45,7 @@ Merge upstream versions when needed:
 
 Grab the `fd-v*_amd64.db` Debian package from the
 [GitHub releases page](https://github.com/sharkdp/fd/releases)
-and install with `sudo dpkg -i *.deb` (works just fine on WLS).
+and install with `sudo dpkg -i *.deb` (works just fine on WSL).
 
 ### Usage
 
