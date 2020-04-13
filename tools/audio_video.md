@@ -35,3 +35,35 @@ ffmpeg -i legit_movie.mkv \
     legit_movie_that_fucking_works.mkv
 ```
 
+### Alternative: On the Fly Transcoding with mpv
+
+As [suggested by @neverpanic](https://twitter.com/neverpanic/status/1249635747281473536),
+[mpv](https://mpv.io) can do the conversion on the fly, while playing the video.
+I always heard that mpv is pretty great, but I wasn't aware that it is
+[available for Windows](https://mpv.io/installation) (there is even a
+[chocolatey package](https://chocolatey.org/packages/mpv)), so I had not
+considered it so far.
+
+Turns out, it's pretty cool, and works just fine on Windows. After
+[some struggles](https://twitter.com/yooogan/status/1249705703964577792)
+with its [immense set of configuration options](https://mpv.io/manual/master/), I ended up
+with this config snippet that does the job:
+
+```config
+# Let AC3 and DTS audio streams pass through to the A/V without touching.
+# See: https://mpv.io/manual/master/#options-audio-spdif
+audio-spdif=ac3,dts
+#
+# Here comes the magical part: *other* codecs (specifically DTS) get
+# transcoded to AC3.
+# See: https://mpv.io/manual/master/#audio-filters-lavcac3enc[
+#
+# scaletempo is needed to keep audio in sync when speeding up/down ([/]).
+# Note that this does not work for audio streams directly passed through.
+af=lavcac3enc,scaletempo
+```
+
+The options can either be passed directly when calling `mpv`
+(`--audio-spdif=ac3,dts --af=lavcac3enc,scaletempo`), or added as shown above
+to the config file (`~/.config/mpv/mpv.conf` on Lunix systems,
+`%APPDATA%\mpv\mpv.conf` on Windows (symlinking works)).
