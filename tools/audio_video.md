@@ -16,7 +16,7 @@ all the time.
 ### Issue: Silence
 
 Got some totally legal video with a fancy surround audio track, but can't hear
-shit (see above). FFmpeg's `ffinfo` reveals the audio track is 7.1 AAC. That's
+shit (see above). FFmpeg's `ffprobe` reveals the audio track is 7.1 AAC. That's
 nice and all, but I only have a 5.1 setup from the middle ages, and (also see
 above) Windows' "Movies and TV" thingy won't adapt the audio for me (VLC does,
 but freezes the video on every prime number video frame).
