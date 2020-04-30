@@ -129,6 +129,11 @@ git clone ssh://zogan.de/~yogan/git/priv/docs
 cd ; ln -s winhome/env ; ln -s winhome/docs
 ```
 
+### Useful WSL Utilities
+
+- [xclip-xsel-WSL](https://github.com/Konfekt/xclip-xsel-WSL) provides `xclip` and `xsel` in
+  WSL so that you can access the Windows clipboard from the command line
+
 ## Development
 
 ### VS Code
