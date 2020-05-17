@@ -24,7 +24,7 @@
 
 ## Set fish as default user shell
 
-* `sudo sh -c 'echo $(which fish) >> /etc/shell`
+* `sudo sh -c 'echo $(which fish) >> /etc/shells'`
 * `chsh -s $(which fish)`
 
 ## Get dotfiles ready
