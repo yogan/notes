@@ -30,6 +30,8 @@
 
 ## Get dotfiles ready
 
+Should already be done by `symlink-env.sh`, but better check:
+
 * `cd ~/.config`
 * `ln -s ~/env/.config/fish`
 * `ln -s ~/env/.config/omf`
@@ -42,8 +44,8 @@ also prepended to `PATH`. This actually works better then expected. I have two
 little convenience functions `path` (to print the values of the two variables)
 and `add_path` (to add e.g. `~/bin`, `~/.fzf/bin`, etc.)
 
-One thing to absolutely add is the path to the fish binary itself, i.e.
-`add_path $HOME/local/bin`.
+If fish is not installed to `/usr/local/bin`, make sure to have that directory
+in the the `PATH`, e.g. `add_path $HOME/local/bin`.
 
 ## Setup oh-my-fish
 
