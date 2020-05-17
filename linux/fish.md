@@ -15,6 +15,7 @@
 * `mkdir build ; cd build`
 * `cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local ..`
   * prefix optional, depending on where you want to have fish installed to
+  * defaults to `/usr/local/`, fine for machines where I'm the only user (e.g. a WSL instance)
 
 ### Build and Install
 
@@ -25,7 +26,7 @@
 ## Set fish as default user shell
 
 * `sudo sh -c 'echo $(which fish) >> /etc/shells'`
-* `chsh -s $(which fish)`
+* `chsh -s $(which fish)` or from fish: `chsh -s (which fish)`
 
 ## Get dotfiles ready
 
