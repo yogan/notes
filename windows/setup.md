@@ -106,7 +106,6 @@ Those steps seem no longer necessary (check if the `meta+h` binding from
 - [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) -
   `choco install sumatrapdf`
 - [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
-- [Greenshot](http://getgreenshot.org/de/) - `choco install greenshot`
 - [ScreenToGif](http://www.screentogif.com/) - `choco install screentogif`
 - also see [tools/graphics page](../tools/graphics.md)
 
