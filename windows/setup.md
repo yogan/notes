@@ -37,7 +37,7 @@ List and upgrade locally installed packages.
 - [Google Drive](https://www.google.com/drive/download/)
 - [Windows Terminal](https://github.com/microsoft/terminal) - download from
   [Windows Store](https://aka.ms/terminal)
-- [Keepass](http://keepass.info/) - `choco install keepass`
+- [KeePass](http://keepass.info/) - `choco install keepass`
 
 ## Keyboard
 
