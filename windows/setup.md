@@ -35,6 +35,8 @@ List and upgrade locally installed packages.
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
   `choco install GoogleChrome`
 - [Google Drive](https://www.google.com/drive/download/)
+- [Windows Terminal](https://github.com/microsoft/terminal) - download from
+  [Windows Store](https://aka.ms/terminal)
 - [Keepass](http://keepass.info/) - `choco install keepass`
 
 ## Keyboard
@@ -70,14 +72,6 @@ Those steps seem no longer necessary (check if the `meta+h` binding from
 
 - ~~edit shipped configuration: `C:\Program Files (x86)\clink\<VERSION>\clink_inputrc_base`~~
 - ~~comment out those lines: `#M-h: show-rl-help`~~
-
-### ConsoleZ
-
-[ConsoleZ](https://github.com/cbucher/console) - `choco install ConsoleZ` - a
-proper terminal around `cmd` and `PowerShell`
-
-Settings are stored in `%APPDATA%\Console`, e.g.
-`C:\Users\yogan\AppData\Roaming\Console`.
 
 ### Miscellaneous
 
