@@ -1,5 +1,9 @@
 # Setting up a fresh Windows machine
 
+A good starting point for setting up a dev environment on Windows is
+*[Windows development environment](https://docs.microsoft.com/en-us/windows/dev-environment/)*
+on *[Microsoft Docs](https://docs.microsoft.com/en-us/)*.
+
 ## Chocolatey
 
 ### First Time Setup
