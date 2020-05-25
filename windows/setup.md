@@ -4,6 +4,23 @@ A good starting point for setting up a dev environment on Windows is
 *[Windows development environment](https://docs.microsoft.com/en-us/windows/dev-environment/)*
 on *[Microsoft Docs](https://docs.microsoft.com/en-us/)*.
 
+## Windows Package Manager aka winget (preview)
+
+The
+[Windows Package Manager](https://docs.microsoft.com/en-us/windows/package-manager/)
+was announced at MS Build 2020 and is currently in preview. It could potentially
+replace Chocolatey in the long run. On Windows 10 Insider, `winget` is already
+available. For stable Windows 10, the quickest way to get it is to grab the
+latest [release from GitHub](https://github.com/microsoft/winget-cli/releases)
+(it's part of *AppInstaller*, so download the
+`Microsoft.DesktopAppInstaller_GIBBERISH.appxbundle` thingy and run that,
+it's fine).
+
+For [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
+usage information, just call `winget` without any arguments. There is `search`
+and `install`, as you would expect, but currently there does not seem to be an
+`update`.
+
 ## Chocolatey
 
 ### First Time Setup
