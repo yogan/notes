@@ -67,3 +67,35 @@ The options can either be passed directly when calling `mpv`
 (`--audio-spdif=ac3,dts --af=lavcac3enc,scaletempo`), or added as shown above
 to the config file (`~/.config/mpv/mpv.conf` on Lunix systems,
 `%APPDATA%\mpv\mpv.conf` on Windows (symlinking works)).
+
+## Creating a Video from a Still Image and Audio
+
+This is e.g. required for Twitter (or YouTube), where you cannot post plain
+audio files, but only video. So, we have to find some fitting still image,
+ideally resize it to a common video resolution like 1280×720, and use FFmpeg to
+create a video from it with the audio track.
+
+Here is a command that takes a PNG and an MP3 as inputs, and creates an MP4 with
+AAC audio and h264 baseline video as outout (which seems to work on Twitter,
+Twitter is super picky about the media files it takes):
+
+```sh
+ffmpeg \
+    -stream_loop -1     \
+    -i pic.png          \
+    -i sound.mp3        \
+    -shortest           \
+    -acodec aac         \
+    -vcodec libx264     \
+    -profile:v baseline \
+    -b:v 1000k          \
+    -pix_fmt yuv420p    \
+    out.mp4
+```
+
+Explanations for non-obvious options:
+
+- `-stream_loop -1` - loop the image infinitely
+- `-shortest` - finish after audio stream ends
+- `-profile:v baseline` - baseline profile for h264, so that Twitter is happy
+- `-pix_fmt yuv420p` - some color voodoo, might depend on input image
