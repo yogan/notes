@@ -16,6 +16,7 @@
 * [HTTP](webdev/http.md)
 * [HTML](webdev/html.md)
 * [JavaScript](webdev/javascript.md)
+* [CSS](webdev/css.md)
 * [Chrome Developer Tools](webdev/chrome-dev-tools.md)
 * [Online IDEs / Playgrounds](webdev/online-ides.md)
 * [Resources](webdev/resources.md)
