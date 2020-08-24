@@ -68,6 +68,21 @@ The options can either be passed directly when calling `mpv`
 to the config file (`~/.config/mpv/mpv.conf` on Lunix systems,
 `%APPDATA%\mpv\mpv.conf` on Windows (symlinking works)).
 
+## Converting a Video to Twitter Compatible Format
+
+Might not be ideal, but has proven to work:
+
+```sh
+ ffmpeg \
+      -i input.webm       \
+      -acodec aac         \
+      -vcodec libx264     \
+      -profile:v baseline \
+      -b:v 1000k          \
+      -pix_fmt yuv420p    \
+      output_that_works_for_twitter.mp4
+```
+
 ## Creating a Video from a Still Image and Audio
 
 This is e.g. required for Twitter (or YouTube), where you cannot post plain
@@ -99,3 +114,4 @@ Explanations for non-obvious options:
 - `-shortest` - finish after audio stream ends
 - `-profile:v baseline` - baseline profile for h264, so that Twitter is happy
 - `-pix_fmt yuv420p` - some color voodoo, might depend on input image
+
