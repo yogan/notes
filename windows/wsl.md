@@ -42,6 +42,21 @@
 * `ssh-keygen`
 * build and install [fish](../linux/fish.md) (see instructions on [its own page](../linux/fish.md))
 
+## Host Names for WSL2 Instances
+
+WSL2 are more like VMs (compared to WSL1), so each instance will also have its
+own (usually dynamic) IP address. To make it easier to access WSL2 hosts from
+the outside, you can use [go-wsl2-host](https://github.com/shayne/go-wsl2-host).
+This runs as a system service, and updates Windows' `/etc/hosts` file, so that
+you can e.g. use `ubuntu2004.wsl` to access a Ubuntu WSL2 host with that name.
+
+Note that you need to set up this tool as a system service, which mean that you
+have to provide your user credentials to it, and make sure that your
+[policies are configured so that your user can log on as a system
+service](https://github.com/shayne/go-wsl2-host/issues/10#issuecomment-597399481):
+
+> Local Security Policy > Local Policies > User Rights Assignment > Log on as a service
+
 ## Add wsltty as Terminal
 
 * [wsltty@GitHub](https://github.com/mintty/wsltty) `choco install wsltty`
