@@ -14,6 +14,9 @@
 
 * [Jest docs: expect](https://facebook.github.io/jest/docs/en/expect.html)
 * [Jest cheat sheet](https://devhints.io/jest)
+* [But really, what is a JavaScript mock?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-mock)
+  by Kent C. Dodds - nice article how you would implement a JS mock yourself,
+  and how to use Jest's module mocking
 
 ## Lil' Bits
 
