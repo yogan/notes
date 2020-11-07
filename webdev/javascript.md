@@ -2,6 +2,9 @@
 
 ## Resources
 
+* [How Web Apps Work](https://blog.isquaredsoftware.com/2020/11/how-web-apps-work-client-dev-deployment)
+  by Mark Erikson - has a nice description of the mess that is (was) JS module
+  formats
 * [Modern JS
   Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet#table-of-contents)
 * [Understanding JavaScript Function Invocation and
