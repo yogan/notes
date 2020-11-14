@@ -10,6 +10,9 @@
 * [Understanding JavaScript Function Invocation and
   "this"](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
   by Yehuda Katz
+* [Jake Archibald: In The Loop](https://youtu.be/cCOL7MC4Pl0)
+  (JSConf.Asia 2018, YouTube, 35 min.) - JS event loop, tasks, microtasks, promises,
+  `setTimeout`, `requestAnimationFrame`, event listeners
 
 ## Testing
 
