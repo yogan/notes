@@ -22,6 +22,10 @@
 * [Resources](webdev/resources.md)
 * [Progressive Web Apps (PWAs)](webdev/pwa.md)
 
+## Languages
+
+* [Rust](languages/rust.md)
+
 ## Linux
 
 * [fish](linux/fish.md)
