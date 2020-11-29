@@ -108,7 +108,8 @@ readline/history for `cmd.exe`
 
 ### Spotify
 
-- [Spotify](https://www.spotify.com/de/download/windows/) *(self-updating, so use installer instead of choco)*
+- [Spotify](https://www.spotify.com/de/download/windows/)
+  *(self-updating, so use installer instead of choco)*
 - [Toastify](https://github.com/aleab/toastify/releases) - global
   keyboard shortcuts and notifications
 
@@ -139,8 +140,9 @@ cd ; ln -s winhome/env ; ln -s winhome/docs
 
 ### Useful WSL Utilities
 
-- [xclip-xsel-WSL](https://github.com/Konfekt/xclip-xsel-WSL) provides `xclip` and `xsel` in
-  WSL so that you can access the Windows clipboard from the command line
+- [xclip-xsel-WSL](https://github.com/Konfekt/xclip-xsel-WSL) provides `xclip`
+  and `xsel` in WSL so that you can access the Windows clipboard from the
+  command line
 
 ## Development
 

@@ -45,9 +45,9 @@ I always heard that mpv is pretty great, but I wasn't aware that it is
 considered it so far.
 
 Turns out, it's pretty cool, and works just fine on Windows. After
-[some struggles](https://twitter.com/yooogan/status/1249705703964577792)
-with its [immense set of configuration options](https://mpv.io/manual/master/), I ended up
-with this config snippet that does the job:
+[some struggles](https://twitter.com/yooogan/status/1249705703964577792) with
+its [immense set of configuration options](https://mpv.io/manual/master/), I
+ended up with this config snippet that does the job:
 
 ```config
 # Let AC3 and DTS audio streams pass through to the A/V without touching.
@@ -114,4 +114,3 @@ Explanations for non-obvious options:
 - `-shortest` - finish after audio stream ends
 - `-profile:v baseline` - baseline profile for h264, so that Twitter is happy
 - `-pix_fmt yuv420p` - some color voodoo, might depend on input image
-
