@@ -10,6 +10,12 @@
 ## Tooling
 
 - [Rust Playground](https://play.rust-lang.org) code in the browser
+- *VS Code extensions*
+  - [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)
+  - [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates)
+    (version management of deps in `Cargo.toml`)
+  - [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+    syntax highlighting for `*.toml`
 
 ## Installation
 
@@ -23,7 +29,9 @@ rustc --version ; cargo --version
 
 ## Cargo
 
-The `npm` of rust. Documentation: [The Cargo Book](https://doc.rust-lang.org/cargo)
+- The `npm` of Rust
+- Packages are called *crates*
+- Documentation: [The Cargo Book](https://doc.rust-lang.org/cargo)
 
 ### [Create a Project](https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html)
 
