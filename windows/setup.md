@@ -77,7 +77,7 @@ etc.
 
 ### clink
 
-[clink](https://mridgers.github.io/clink/) - `choco install clink` -
+[clink](https://mridgers.github.io/clink/) - `winget  install clink` -
 readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink\`
