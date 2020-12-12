@@ -122,23 +122,8 @@ cd ; ln -s winhome/env ; ln -s winhome/docs
 
 ### VS Code
 
-- `choco install VisualStudioCode`
-- be sure to have Explorer integration checked (if not, run installer again
-  later)
-
-For initial setup, get user settings from gist:
-
-- add the [Settings
-  Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
-  extension
-- `<Ctrl><Shift><p>` → `Preferences: Open User Settings`
-  - add `"sync.gist": "ae3bdfbb98c2054b242e1e0361628bfb"`
-  - remove all other `sync.*` settings
-- `<Ctrl><Shift><p>` → `Sync: Download settings`
-
-Settings are stored in `%APPDATA%\Code\User\`.
-
-**TODO:** *figure out how this fscking `syncLocalSettings.json` works*
+- `winget install vscode`
+- enable settings sync (pick everything except UI state), log in via GitHub
 
 ## References
 
