@@ -1,52 +1,5 @@
 # Setting up a fresh Windows machine
 
-A good starting point for setting up a dev environment on Windows is
-*[Windows development environment](https://docs.microsoft.com/en-us/windows/dev-environment/)*
-on *[Microsoft Docs](https://docs.microsoft.com/en-us/)*.
-
-## Windows Package Manager aka winget (preview)
-
-The
-[Windows Package Manager](https://docs.microsoft.com/en-us/windows/package-manager/)
-was announced at MS Build 2020 and is currently in preview. It could potentially
-replace Chocolatey in the long run. On Windows 10 Insider, `winget` is already
-available. For stable Windows 10, the quickest way to get it is to grab the
-latest [release from GitHub](https://github.com/microsoft/winget-cli/releases)
-(it's part of *AppInstaller*, so download the
-`Microsoft.DesktopAppInstaller_GIBBERISH.appxbundle` thingy and run that,
-it's fine).
-
-For [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
-usage information, just call `winget` without any arguments. There is `search`
-and `install`, as you would expect, but currently there does not seem to be an
-`update`.
-
-## Chocolatey
-
-### First Time Setup
-
-- [install Chocolatey](https://chocolatey.org/install) as described (from Admin
-  `cmd` or `PowerShell`)
-- `choco` should be in `%PATH%` after installation
-  - ProTip™: use `which` npm package (`npm install -g which`)
-- Run all future `choco` commands as admin
-- `choco feature enable -n=allowGlobalConfirmation`
-
-### Usage
-
-It makes sense to always use an elevated (Admin) `cmd` or `PowerShell` to work
-with `choco` (as we are installing software, this is perfectly fine.)
-
-To install something new:
-
-- `choco search foo`
-- `choco install foo`
-
-List and upgrade locally installed packages.
-
-- `choco list -l`
-- `choco upgrade all`
-
 ## Essentials
 
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
@@ -172,7 +125,55 @@ Settings are stored in `%APPDATA%\Code\User\`.
 
 ## References
 
+- A good starting point for setting up a dev environment on Windows is
+  *[Windows development environment](https://docs.microsoft.com/en-us/windows/dev-environment/)*
+  on *[Microsoft Docs](https://docs.microsoft.com/en-us/)*.
 - [SoCraTes 2016 Windows Tools Session Notes](https://blog.sandra-parsick.de/2016/09/20/summary-of-socrates-2016-session-hey-dude-where-is-my-tool-chain-working-on-windows-as-a-linux-user-aka-lets-talk-about-windows/)
+
+## Package Managers
+
+### Windows Package Manager aka winget (preview)
+
+The
+[Windows Package Manager](https://docs.microsoft.com/en-us/windows/package-manager/)
+was announced at MS Build 2020 and is currently in preview. It could potentially
+replace Chocolatey in the long run. On Windows 10 Insider, `winget` is already
+available. For stable Windows 10, the quickest way to get it is to grab the
+latest [release from GitHub](https://github.com/microsoft/winget-cli/releases)
+(it's part of *AppInstaller*, so download the
+`Microsoft.DesktopAppInstaller_GIBBERISH.appxbundle` thingy and run that,
+it's fine).
+
+For [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
+usage information, just call `winget` without any arguments. There is `search`
+and `install`, as you would expect, but currently there does not seem to be an
+`update`.
+
+### Chocolatey
+
+#### First Time Setup
+
+- [install Chocolatey](https://chocolatey.org/install) as described (from Admin
+  `cmd` or `PowerShell`)
+- `choco` should be in `%PATH%` after installation
+  - ProTip™: use `which` npm package (`npm install -g which`)
+- Run all future `choco` commands as admin
+- `choco feature enable -n=allowGlobalConfirmation`
+
+#### Usage
+
+It makes sense to always use an elevated (Admin) `cmd` or `PowerShell` to work
+with `choco` (as we are installing software, this is perfectly fine.)
+
+To install something new:
+
+- `choco search foo`
+- `choco install foo`
+
+List and upgrade locally installed packages.
+
+- `choco list -l`
+- `choco upgrade all`
 
 ## TODO
 
