@@ -57,24 +57,6 @@ service](https://github.com/shayne/go-wsl2-host/issues/10#issuecomment-597399481
 
 > Local Security Policy > Local Policies > User Rights Assignment > Log on as a service
 
-## Add wsltty as Terminal
-
-* [wsltty@GitHub](https://github.com/mintty/wsltty) `choco install wsltty`
-* run "WSL Generate Shortcuts" (should be in Start Menu, if not, try re-installing wsltty)
-* Start Menu → WSL Terminal → *right click* → more → Open file location → Properties → Run: *Maximized*
-* Start Menu → WSL Terminal → *right click* → more → Pin to taskbar
-* Explorer → `%APPDATA%\wsltty\config`
-  * delete `config` (it's empty, besides a comment)
-  * create `%APPDATA%\mintty\`
-  * symlink (Shell Ext.) `.minttyrc` from env git repo (Windows) to `mintty\`
-  * rename `.minttyrc` to `config`
-* font: install "DejaVu Sans Mono Nerd Font" from
- [NerdFonts repo](https://github.com/ryanoasis/nerd-fonts/releases)
- (unzip, install `"* Mono Windows Compatible.ttf"`)
-* optionally, some tweaks via properties of shortcut:
-  * `-o FontHeight=NUM`* can be added to override font size from config file
-  * use icon from `env/icons/fish-terminal.ico`
-
 ## Interoperability
 
 ### Filesystem
