@@ -49,13 +49,14 @@ List and upgrade locally installed packages.
 
 ## Essentials
 
+- [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
+  `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
+- [Google Drive](https://www.google.com/drive/download/) - `winget install Google.BackupAndSync`
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
+- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
+- [KeePass](http://keepass.info/) - `choco install keepass`
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
   `choco install GoogleChrome`
-- [Google Drive](https://www.google.com/drive/download/)
-- [Windows Terminal](https://github.com/microsoft/terminal) - download from
-  [Windows Store](https://aka.ms/terminal)
-- [KeePass](http://keepass.info/) - `choco install keepass`
 
 ## Keyboard
 
