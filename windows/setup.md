@@ -20,11 +20,12 @@
 
 ## Keyboard
 
-- Use [*Keyboard Manager*](https://aka.ms/PowerToysOverview_KeyboardManager) of *PowerToys* to remap some keys:
+- [SharpKeys](https://sharpkeys.codeplex.com) - `winget install sharpkeys`
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
-  - for reference: used to do this with [SharpKeys](https://sharpkeys.codeplex.com),
-    but PowerToys can now do the same thing, and even without forcing to sign-out
+  - *note: PowerToyes has a Keyboard Manager, but that one needs to be running for the
+    mappings to work, and generally does not work for some elevated stuff, like win logon;
+    SharpKeys does some registry stuff that is lower level and works better*
 - [WinCompose](https://github.com/SamHocevar/wincompose) - `choco install wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how
     to symlink are at the top of `WinCompose.XCompose` itself)
