@@ -42,11 +42,21 @@ etc.
 ### clink
 
 [clink](https://mridgers.github.io/clink/) - `winget install clink` -
-readline/history for `cmd.exe` and PowerShell
+readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink\`
 - create *hardlink* to `env/.inputrc` in `C:\Users\<USERNAME>\`
 - rename hardlinked `.inputrc` to `_inputrc`
+
+### PowerShell Profile
+
+- prompt and keybindings for PowerShell (incl. ^W/^U etc.) are all in `Profile.ps1`
+- follow instructions in `env/PowerShell/Profile.ps1`
+- `^R` requires `fzf`, which is not available via winget
+   - either use `choco`, or
+   - just graph the zipfile from the [GitHub releases](https://github.com/junegunn/fzf/releases)
+     - unzip to e.g. `C:\Program Files\Fzf`
+     - add that to `$PATH` (system env vars)
 
 ### Miscellaneous
 
