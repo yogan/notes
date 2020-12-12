@@ -7,9 +7,9 @@
 - [Google Drive](https://www.google.com/drive/download/) - `winget install Google.BackupAndSync`
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
-- [KeePass](http://keepass.info/) - `choco install keepass`
+- [KeePass](http://keepass.info/) - `winget install keepass`
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
-  `choco install GoogleChrome`
+  `winget install Google.Chrome`
 
 ## Keyboard
 
