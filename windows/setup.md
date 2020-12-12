@@ -83,10 +83,9 @@ readline/history for `cmd.exe`
 
 ### Spotify
 
-- [Spotify](https://www.spotify.com/de/download/windows/)
-  *(self-updating, so use installer instead of choco)*
-- [Toastify](https://github.com/aleab/toastify/releases) - global
-  keyboard shortcuts and notifications
+- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install spotify`
+- [Toastify](https://github.com/aleab/toastify/releases) (no winget, use installer) -
+  global keyboard shortcuts and notifications
 
 ### Graphics/Viewers
 
