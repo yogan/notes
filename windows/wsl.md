@@ -127,3 +127,53 @@ To upgrade an existing 14.04, you can either:
 
 The later seems to work fine, just like upgrading a "real" Ubuntu/Debian
 installation. After the upgrade, a Windows reboot is needed.
+
+## Backup / Restore
+
+Installed WSL distros can be backed up to a tarball and later restored from that.  
+This works for both WSL1 and WSL2 distros.
+
+### Backup
+
+```sh
+wsl --export Ubuntu-18.04 Ubuntu-18.04.tar
+wsl --export Ubuntu-20.04 Ubuntu-20.04.tar
+```
+
+### Restore
+
+Target directory needs to exist. So in the example below, make sure to create
+`C:\WSL\` first.
+
+```sh
+wsl --import Ubuntu-18.04 C:\WSL\Ubuntu-18.04 D:\WSL-backup\Ubuntu-18.04.tar
+wsl --import Ubuntu-20.04 C:\WSL\Ubuntu-20.04 D:\WSL-backup\Ubuntu-20.04.tar
+```
+
+### Verification / Fixing Stuff
+
+After the restore, the distro should be listed in `wsl --list -v`.  
+You may want to change the default distro with `wsl --set-default`.
+
+#### WSL Version
+
+You probably have set WSL to default to v2, so both will be v2 distro.
+If one of the distros is supposed to be v1, it can be downgraded like this:
+
+```sh
+wsl --set-version Ubuntu-18.04 1
+```
+
+#### Default User
+
+Unfortunatelly, the default user is lost by the backup/restore (see
+[this GitHub issue](https://github.com/microsoft/WSL/issues/3974), so
+launching the distros gives you a `root` shell.
+
+This needs to be fixed in the registry (yes, the registry).
+
+- get the UID of your WSL user: `id -u <user>` (it's probably `1000`)
+- launch good ol' regedit, go to `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss`
+- all distros are below that, check their `DistributionName` values to see which is which
+- put the UID of your user into `DefaultUid` (make sure to enter as decimal, not hex)
+- restart the distro (closing all instances should do it, or enfore with `wsl --terminate`)
