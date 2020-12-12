@@ -49,6 +49,7 @@ List and upgrade locally installed packages.
 
 ## Essentials
 
+- [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
   `choco install GoogleChrome`
 - [Google Drive](https://www.google.com/drive/download/)
@@ -58,9 +59,11 @@ List and upgrade locally installed packages.
 
 ## Keyboard
 
-- [SharpKeys](https://sharpkeys.codeplex.com) - `choco install sharpkeys`
+- Use [*Keyboard Manager*](https://aka.ms/PowerToysOverview_KeyboardManager) of *PowerToys* to remap some keys:
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
+  - for reference: used to do this with [SharpKeys](https://sharpkeys.codeplex.com),
+    but PowerToys can now do the same thing, and even without forcing to sign-out
 - [WinCompose](https://github.com/SamHocevar/wincompose) - `choco install wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how
     to symlink are at the top of `WinCompose.XCompose` itself)
