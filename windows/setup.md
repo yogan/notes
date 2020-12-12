@@ -11,6 +11,13 @@
 - [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
   `winget install Google.Chrome`
 
+## Git
+
+- Git - `winget install git`
+- clone dotfiles once for Windows (later again for WSL)
+  - in Windows home (`C:\Users\<user>`)
+  - `git clone ssh://zogan.de/~yogan/git/priv/env`
+
 ## Keyboard
 
 - Use [*Keyboard Manager*](https://aka.ms/PowerToysOverview_KeyboardManager) of *PowerToys* to remap some keys:
