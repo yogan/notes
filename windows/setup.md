@@ -16,7 +16,7 @@
 - Git - `winget install git`
 - clone dotfiles once for Windows (later again for WSL)
   - in Windows home (`C:\Users\<user>`)
-  - `git clone ssh://zogan.de/~yogan/git/priv/env`
+  - `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
 
 ## Keyboard
 
