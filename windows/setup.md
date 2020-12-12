@@ -36,13 +36,13 @@
 
 [Link Shell
 Extension](http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html) -
-`choco install LinkShellExtension` - to create symlinks, hardlinks, junctions,
+`winget install HermannSchinagl.LinkShellExtension` - to create symlinks, hardlinks, junctions,
 etc.
 
 ### clink
 
-[clink](https://mridgers.github.io/clink/) - `winget  install clink` -
-readline/history for `cmd.exe`
+[clink](https://mridgers.github.io/clink/) - `winget install clink` -
+readline/history for `cmd.exe` and PowerShell
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink\`
 - create *hardlink* to `env/.inputrc` in `C:\Users\<USERNAME>\`
