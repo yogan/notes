@@ -49,13 +49,14 @@ readline/history for `cmd.exe`
 - create *hardlink* to `env/.inputrc` in `C:\Users\<USERNAME>\`
 - rename hardlinked `.inputrc` to `_inputrc`
 
-### PowerShell Profile
+### PowerShell
 
-- prompt and keybindings for PowerShell (incl. ^W/^U etc.) are all in `Profile.ps1`
+- `winget install powershell` to install a recent PowerShell
+- prompt and keybindings (incl. ^W/^U etc.) are all in `Profile.ps1`
 - follow instructions in `env/PowerShell/Profile.ps1`
 - `^R` requires `fzf`, which is not available via winget
-   - either use `choco`, or
-   - just graph the zipfile from the [GitHub releases](https://github.com/junegunn/fzf/releases)
+   - either use `choco` if available, or
+   - grab the zipfile from the [GitHub releases](https://github.com/junegunn/fzf/releases)
      - unzip to e.g. `C:\Program Files\Fzf`
      - add that to `$PATH` (system env vars)
 
