@@ -167,10 +167,19 @@ wsl --set-version Ubuntu-18.04 1
 #### Default User
 
 Unfortunatelly, the default user is lost by the backup/restore (see
-[this GitHub issue](https://github.com/microsoft/WSL/issues/3974), so
-launching the distros gives you a `root` shell.
+[this GitHub issue](https://github.com/microsoft/WSL/issues/3974)), so
+launching the distro gives you a `root` shell.
 
-This needs to be fixed in the registry (yes, the registry).
+The proper way to fix this would be:
+
+```
+<distro>.exe config --default-user <user> # <distro>.exe is e.g. ubuntu2004.exe
+```
+
+but the distro launcher (`ubuntu2004.exe`) is not part of the tarball, so
+it's lost when moving the distro to a new Windows installation.
+
+So, this needs to be fixed directly in the registry (yes, the registry).
 
 - get the UID of your WSL user: `id -u <user>` (it's probably `1000`)
 - launch good ol' regedit, go to `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss`
