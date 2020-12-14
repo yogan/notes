@@ -54,3 +54,16 @@ Run directly:
 ```sh
 cargo run
 ```
+
+## Tests
+
+```sh
+cargo test                 # run all tests
+
+cargo test sum             # run all tests with "sum" in name
+cargo test my_module       # works for modules as well, because test names
+                           # look like my_module::test::sum_returns_42
+
+cargo test -- --nocapture  # show stdout (captured and hidden by default)
+```
+
