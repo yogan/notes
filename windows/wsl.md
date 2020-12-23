@@ -177,9 +177,12 @@ The proper way to fix this would be:
 ```
 
 but the distro launcher (`ubuntu2004.exe`) is not part of the tarball, so
-it's lost when moving the distro to a new Windows installation.
+it's lost when moving the distro to a new Windows installation. Either make
+a backup of the launcher as well, or you [wsldl](https://github.com/yuk7/wsldl)
+as a replacement.
 
-So, this needs to be fixed directly in the registry (yes, the registry).
+Without the original launcher or wsldl, this can also be fixed directly in
+the registry (yes, the registry).
 
 - get the UID of your WSL user: `id -u <user>` (it's probably `1000`)
 - launch good ol' regedit, go to `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss`
