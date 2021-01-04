@@ -93,7 +93,7 @@ readline/history for `cmd.exe`
 - [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) -
   `choco install sumatrapdf`
 - [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
-- [ScreenToGif](http://www.screentogif.com/) - `choco install screentogif`
+- [ScreenToGif](http://www.screentogif.com/) - `winget install ScreenToGif`
 - also see [tools/graphics page](../tools/graphics.md)
 
 ## WSL
