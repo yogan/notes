@@ -6,6 +6,7 @@
 * [Tweaks](windows/tweaks.md)
 * [Auto run programs after logon](windows/autorun.md)
 * [Running PowerShell scripts](windows/powershell.md)
+* [Certificates](windows/certificates.md)
 * [Windows Subsystem for Linux (WSL)](windows/wsl.md)
 * [Fix Duplicate Pinned Taskbar
   Icons](windows/fix-duplicate-pinned-taskbar-icons.md)
