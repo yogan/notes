@@ -12,3 +12,6 @@ Import-Certificate -FilePath mycert.cer -CertStoreLocation cert:\CurrentUser\Roo
 See [Import-Certificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/import-certificate?view=windowsserver2019-ps)
 documentation for more details.
 
+*Note:* Browsers might need to be restarted so that they pick up a new
+certificate.
+
