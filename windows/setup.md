@@ -4,7 +4,7 @@
 
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
-- [Google Drive](https://www.google.com/drive/download/) - `winget install Google.BackupAndSync`
+- [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
 - [KeePass](http://keepass.info/) - `winget install keepass`
