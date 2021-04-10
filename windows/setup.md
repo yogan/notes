@@ -68,7 +68,7 @@ readline/history for `cmd.exe`
 - [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) -
   `choco install AutoRuns`
 - [EarTrumpet](https://github.com/File-New-Project/EarTrumpet) -
-  `choco install eartrumpet`  
+  `winget install eartrumpet`  
   nice replacement for Windows volume control/mixer (directly shows controls
   and current volume level of applications)  
 - [Rufus](http://rufus.akeo.ie) create bootable USB drives from `.iso` images
