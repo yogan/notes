@@ -26,7 +26,7 @@
   - *note: PowerToyes has a Keyboard Manager, but that one needs to be running for the
     mappings to work, and generally does not work for some elevated stuff, like win logon;
     SharpKeys does some registry stuff that is lower level and works better*
-- [WinCompose](https://github.com/SamHocevar/wincompose) - `choco install wincompose`
+- [WinCompose](https://github.com/SamHocevar/wincompose) - `winget install wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how
     to symlink are at the top of `WinCompose.XCompose` itself)
   - use a env clone in Windows for this; do not link to env within WSL!
