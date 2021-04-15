@@ -6,6 +6,10 @@
   - [The Rust Programming Language aka "The Book"](https://doc.rust-lang.org/book)
   - [Easy Rust](https://github.com/Dhghomon/easy_rust) tutorial on a single
     GitHub page, can be done mostly in the playground
+- [Rust WebApps Presentation](https://git.onders.org/finga/presentation-rust-webapps)
+  by finga/CCC Salzburg
+  - basic HTTP backend with an ORM using SQLite and server-side HTML templates
+  - [Slides](https://git.onders.org/finga/presentation-rust-webapps/src/branch/master/rust_web.org)
 
 ## Tooling
 
@@ -67,4 +71,3 @@ cargo test my_module       # works for modules as well, because test names
 
 cargo test -- --nocapture  # show stdout (captured and hidden by default)
 ```
-
