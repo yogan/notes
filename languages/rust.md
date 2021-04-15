@@ -22,7 +22,8 @@
 Quick & dirty (works well, though):
 
 ```sh
-curl https://sh.rustup.rs -sSf | sh  # modifies PATH in .profile / .bashrc
+curl --proto '=https' --tlsv1.2 -sSf \
+  https://sh.rustup.rs | sh          # modifies PATH in .profile / .bashrc
 add_path ~/.caro/bin                 # fish only, with `add_path` func defined
 rustc --version ; cargo --version
 ```
