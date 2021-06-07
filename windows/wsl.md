@@ -57,6 +57,22 @@ service](https://github.com/shayne/go-wsl2-host/issues/10#issuecomment-597399481
 
 > Local Security Policy > Local Policies > User Rights Assignment > Log on as a service
 
+## Networking
+
+Accessing ports opened in WSL2 from an external device (e.g. testing a web app
+from a mobile phone) needs some tricks:
+
+- opening the port in the Windows firewall:
+  - Settings → Firewall → Advanced settings (brings up MMC)
+  - Inbound Rules → New Rule → Port → TCP → …
+- running the process in a mode that binds to all interfaces
+  - e.g. Angular: `ng serve -- --host 0.0.0.0`
+  - however, that part [seems to be buggy](https://github.com/microsoft/WSL/issues/4150),
+    probably because WSL2 is using a bridged network
+  - [WSLHostPatcher](https://github.com/CzBiX/WSLHostPatcher) is one easy way
+    to solve that (there are others mentioned in the GitHub issue linked above)
+  - just run WSLHostPatcher once _before_ the listening process is started
+
 ## Interoperability
 
 ### Filesystem
