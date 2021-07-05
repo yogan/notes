@@ -78,6 +78,21 @@ readline/history for `cmd.exe`
 
 ## Applications
 
+### Audio / Video
+
+- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install spotify`
+- [Toastify](https://github.com/aleab/toastify/releases) (no winget, use installer) -
+  global keyboard shortcuts and notifications
+- [mpv.net](https://github.com/stax76/mpv.net) - `winget install mpv.net`
+
+### Graphics / Document Viewers
+
+- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) -
+  `choco install sumatrapdf`
+- [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
+- [ScreenToGif](http://www.screentogif.com/) - `winget install ScreenToGif`
+- also see [tools/graphics page](../tools/graphics.md)
+
 ### Vim
 
 - `choco install vim`
@@ -85,20 +100,6 @@ readline/history for `cmd.exe`
 - rename hardlinked `.vimrc` to `_vimrc`
 - make *junction* of `env/.vim/` to `c:\Program Files\vim\`
 - rename `.vim` to `vimfiles` (remove old one there)
-
-### Spotify
-
-- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install spotify`
-- [Toastify](https://github.com/aleab/toastify/releases) (no winget, use installer) -
-  global keyboard shortcuts and notifications
-
-### Graphics/Viewers
-
-- [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) -
-  `choco install sumatrapdf`
-- [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
-- [ScreenToGif](http://www.screentogif.com/) - `winget install ScreenToGif`
-- also see [tools/graphics page](../tools/graphics.md)
 
 ## WSL
 
