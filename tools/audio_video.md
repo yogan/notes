@@ -42,7 +42,9 @@ As [suggested by @neverpanic](https://twitter.com/neverpanic/status/124963574728
 I always heard that mpv is pretty great, but I wasn't aware that it is
 [available for Windows](https://mpv.io/installation) (there is even a
 [chocolatey package](https://chocolatey.org/packages/mpv)), so I had not
-considered it so far.
+considered it so far.  
+*Update: there is also [mpv.net](https://github.com/stax76/mpv.net),
+which is even nicer and available via winget.*
 
 Turns out, it's pretty cool, and works just fine on Windows. After
 [some struggles](https://twitter.com/yooogan/status/1249705703964577792) with
