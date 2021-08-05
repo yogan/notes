@@ -4,6 +4,8 @@
 
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
+  - one-liner (cmd):  
+    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension MRidgers.Clink powershell procexp AutoRuns eartrumpet spotify mpv.net paint.net ScreenToGif vscode) do winget install %x`
 - [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
