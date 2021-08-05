@@ -6,6 +6,8 @@
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
   - one-liner (cmd):  
     `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension MRidgers.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install %x`
+  - missing stuff via choco (see below for choco setup):  
+    `choco install autoruns procexp paint.net`
 - [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
