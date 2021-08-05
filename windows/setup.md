@@ -10,8 +10,6 @@
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
 - [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
 - [KeePass](http://keepass.info/) - `winget install keepass`
-- [Chrome](https://www.google.de/intl/de/chrome/browser/desktop/index.html) -
-  `winget install Google.Chrome`
 
 ## Git
 
