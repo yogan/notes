@@ -197,7 +197,17 @@ it's lost when moving the distro to a new Windows installation. Either make
 a backup of the launcher as well, or you [wsldl](https://github.com/yuk7/wsldl)
 as a replacement.
 
-Without the original launcher or wsldl, this can also be fixed directly in
+##### wsldl Setup
+
+- download [wsldl release](https://github.com/yuk7/wsldl/releases)
+- Edge might complain that this is not secure, as the binary is not signed, but ¯\_(ツ)_/¯
+- copy `wsldl.exe` to e.g. `C:\WSL\Ubuntu-20.04.exe`
+- add `C:\WSL` to system `$PATH`
+- `Ubuntu-20.04.exe config --default-user yogan`
+
+##### Registry Alternative
+
+Without the original launcher or `wsldl`, this can also be fixed directly in
 the registry (yes, the registry).
 
 - get the UID of your WSL user: `id -u <user>` (it's probably `1000`)
