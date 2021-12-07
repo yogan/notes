@@ -22,7 +22,7 @@
 
 ## Keyboard
 
-- [SharpKeys](https://sharpkeys.codeplex.com) - `winget install sharpkeys`
+- [SharpKeys](https://www.randyrants.com/category/sharpkeys/) - `winget install sharpkeys`
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
   - *note: PowerToyes has a Keyboard Manager, but that one needs to be running for the
