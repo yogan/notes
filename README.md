@@ -26,6 +26,7 @@
 
 ## Languages
 
+* [C#](languages/csharp.md)
 * [Rust](languages/rust.md)
 
 ## Linux
