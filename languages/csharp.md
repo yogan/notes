@@ -22,6 +22,7 @@
     - [Strings Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/)
     - [`System.String`](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 - [LINQ Queries](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities#method-based-query-syntax)
+- [Nullable Reference Types](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references)
 
 ## How Tos
 
