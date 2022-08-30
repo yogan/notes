@@ -11,6 +11,7 @@
   by finga/CCC Salzburg
   - basic HTTP backend with an ORM using SQLite and server-side HTML templates
   - [Slides](https://git.onders.org/finga/presentation-rust-webapps/src/branch/master/rust_web.org)
+- Talk: ["Type-Driven API Design in Rust" by Will Crichton](https://www.youtube.com/watch?v=bnnacleqg6k)
 
 ## Tooling
 
