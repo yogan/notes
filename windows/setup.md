@@ -5,7 +5,7 @@
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
   - one-liner (cmd):  
-    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension MRidgers.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install %x`
+    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install %x`
   - missing stuff via choco (see below for choco setup):  
     `choco install autoruns procexp paint.net fzf`
 - [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
@@ -44,7 +44,7 @@ etc.
 
 ### clink
 
-[clink](https://mridgers.github.io/clink/) - `winget install MRidgers.Clink` -
+[clink](https://chrisant996.github.io/clink/) - `winget install chrisant996.Clink` -
 readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink\`
