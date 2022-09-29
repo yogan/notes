@@ -5,12 +5,12 @@
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
   - one-liner (cmd):  
-    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install -s winget %x`
+    `for %x in (powertoys Microsoft.WindowsTerminal.Preview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install -s winget %x`
   - missing stuff via choco (see below for choco setup):  
     `choco install autoruns procexp paint.net fzf`
 - [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
 - [PowerToys](https://github.com/microsoft/PowerToys) - `winget install -s winget powertoys`
-- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install -s winget Microsoft.WindowsTerminalPreview`
+- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install -s winget Microsoft.WindowsTerminal.Preview`
 - [KeePass](http://keepass.info/) - `winget install -s winget keepass`
 
 ## Git
