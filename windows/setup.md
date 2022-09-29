@@ -5,30 +5,30 @@
 - [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
   `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
   - one-liner (cmd):  
-    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install %x`
+    `for %x in (powertoys Microsoft.WindowsTerminalPreview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install -s winget %x`
   - missing stuff via choco (see below for choco setup):  
     `choco install autoruns procexp paint.net fzf`
 - [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
-- [PowerToys](https://github.com/microsoft/PowerToys) - `winget install powertoys`
-- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install Microsoft.WindowsTerminalPreview`
-- [KeePass](http://keepass.info/) - `winget install keepass`
+- [PowerToys](https://github.com/microsoft/PowerToys) - `winget install -s winget powertoys`
+- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install -s winget Microsoft.WindowsTerminalPreview`
+- [KeePass](http://keepass.info/) - `winget install -s winget keepass`
 
 ## Git
 
-- Git - `winget install git`
+- Git - `winget install -s winget git`
 - clone dotfiles once for Windows (later again for WSL)
   - in Windows home (`C:\Users\<user>`)
   - `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
 
 ## Keyboard
 
-- [SharpKeys](https://www.randyrants.com/category/sharpkeys/) - `winget install sharpkeys`
+- [SharpKeys](https://www.randyrants.com/category/sharpkeys/) - `winget install -s winget sharpkeys`
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
   - *note: PowerToyes has a Keyboard Manager, but that one needs to be running for the
     mappings to work, and generally does not work for some elevated stuff, like win logon;
     SharpKeys does some registry stuff that is lower level and works better*
-- [WinCompose](https://github.com/SamHocevar/wincompose) - `winget install wincompose`
+- [WinCompose](https://github.com/SamHocevar/wincompose) - `winget install -s winget wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how
     to symlink are at the top of `WinCompose.XCompose` itself)
   - use a env clone in Windows for this; do not link to env within WSL!
@@ -39,12 +39,12 @@
 
 [Link Shell
 Extension](http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html) -
-`winget install HermannSchinagl.LinkShellExtension` - to create symlinks, hardlinks, junctions,
+`winget install -s winget HermannSchinagl.LinkShellExtension` - to create symlinks, hardlinks, junctions,
 etc.
 
 ### clink
 
-[clink](https://chrisant996.github.io/clink/) - `winget install chrisant996.Clink` -
+[clink](https://chrisant996.github.io/clink/) - `winget install -s winget chrisant996.Clink` -
 readline/history for `cmd.exe`
 
 - symlink `env/clink/settings` to `C:\Users\<USERNAME>\AppData\Local\clink\`
@@ -53,7 +53,7 @@ readline/history for `cmd.exe`
 
 ### PowerShell
 
-- `winget install powershell` to install a recent PowerShell
+- `winget install -s winget powershell` to install a recent PowerShell
 - prompt and keybindings (incl. ^W/^U etc.) are all in `Profile.ps1`
 - follow instructions in `env/PowerShell/Profile.ps1`
 - `^R` requires `fzf`, which is not available via winget
@@ -70,7 +70,7 @@ readline/history for `cmd.exe`
 - [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) -
   `choco install AutoRuns`
 - [EarTrumpet](https://github.com/File-New-Project/EarTrumpet) -
-  `winget install eartrumpet`  
+  `winget install -s winget eartrumpet`  
   nice replacement for Windows volume control/mixer (directly shows controls
   and current volume level of applications)  
 - [Rufus](http://rufus.akeo.ie) create bootable USB drives from `.iso` images
@@ -82,17 +82,17 @@ readline/history for `cmd.exe`
 
 ### Audio / Video
 
-- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install spotify`
+- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install -s winget spotify`
 - [Toastify](https://github.com/aleab/toastify/releases) (no winget, use installer) -
   global keyboard shortcuts and notifications
-- [mpv.net](https://github.com/stax76/mpv.net) - `winget install mpv.net`
+- [mpv.net](https://github.com/stax76/mpv.net) - `winget install -s winget mpv.net`
 
 ### Graphics / Document Viewers
 
 - [SumatraPDF](http://www.sumatrapdfreader.org/free-pdf-reader.html) -
   `choco install sumatrapdf`
 - [Paint.NET](http://www.getpaint.net) - `choco install paint.net`
-- [ScreenToGif](http://www.screentogif.com/) - `winget install ScreenToGif`
+- [ScreenToGif](http://www.screentogif.com/) - `winget install -s winget ScreenToGif`
 - also see [tools/graphics page](../tools/graphics.md)
 
 ### Vim
@@ -130,7 +130,7 @@ cd ; ln -s winhome/env ; ln -s winhome/docs
 
 ### VS Code
 
-- `winget install vscode`
+- `winget install -s winget vscode`
 - enable settings sync (pick everything except UI state), log in via GitHub
 
 ## References
