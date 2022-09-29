@@ -82,7 +82,7 @@ readline/history for `cmd.exe`
 
 ### Audio / Video
 
-- [Spotify](https://www.spotify.com/de/download/windows/) - `winget install -s winget spotify`
+- [Spotify](https://www.spotify.com/de/download/windows/) (winget borken, use installer)
 - [Toastify](https://github.com/aleab/toastify/releases) (no winget, use installer) -
   global keyboard shortcuts and notifications
 - [mpv.net](https://github.com/stax76/mpv.net) - `winget install -s winget mpv.net`
