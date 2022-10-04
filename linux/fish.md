@@ -8,7 +8,7 @@
 ### Get Source
 
 * get tarball from [GitHub Releases](https://github.com/fish-shell/fish-shell/releases)
-* `sudo apt install build-essential cmake ncurses-dev libncurses5-dev libpcre2-dev gettext`
+* `sudo apt install build-essential cmake libncurses-dev libncurses5-dev libpcre2-dev gettext`
 
 ### Configure with CMake
 
