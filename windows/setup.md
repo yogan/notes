@@ -64,6 +64,11 @@ readline/history for `cmd.exe`
 
 ### Miscellaneous
 
+- [Process Hacker](https://processhacker.sourceforge.io/) -
+  `choco install processhacker`  
+  seems superior to Process Explorer; last release (2.39) is kinda old (2016),
+  project seems to be currently developed as
+  [System Informer](https://github.com/winsiderss/systeminformer).
 - [Process
   Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx) -
   `choco install procexp`
