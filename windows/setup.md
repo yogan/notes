@@ -72,6 +72,8 @@ readline/history for `cmd.exe`
 - [Process
   Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx) -
   `choco install procexp`
+- [TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview) -
+  `choco install tcpview`
 - [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) -
   `choco install AutoRuns`
 - [EarTrumpet](https://github.com/File-New-Project/EarTrumpet) -
