@@ -7,6 +7,7 @@
   - [Easy Rust](https://github.com/Dhghomon/easy_rust) tutorial on a single
     GitHub page, can be done mostly in the playground
   - [Rust for JavaScript Peeps](https://github.com/yoshuawuyts/rust-for-js-peeps)
+  - [Comprehensive Rust](https://google.github.io/comprehensive-rust/) a four day Rust course developed by the Android team
 - [Rust WebApps Presentation](https://git.onders.org/finga/presentation-rust-webapps)
   by finga/CCC Salzburg
   - basic HTTP backend with an ORM using SQLite and server-side HTML templates
