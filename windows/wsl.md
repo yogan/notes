@@ -120,6 +120,28 @@ The current (Linux) working directory is translated and passed to the Windows
 application, as long as it is something below `/mnt/`; otherwise a warning will
 be printed. So you can e.g. start VS Code in the current directory with `code .`
 
+**Performance Tip**
+
+This works by WSL adding the Windows `%PATH%` to the WSL Linux `$PATH`. While it
+is convenient, it can lead to bad shell performance, e.g. for tab completion (as
+the shell needs to check all `$PATH` entries for binaries, which is slow for
+Windows FS directories). This behavior can be disabled by adding this entry
+to `/etc/wsl.conf` (applying changes requires a `wsl --shutdown`):
+
+```ini
+[interop]
+appendWindowsPath = false
+```
+
+To make some selected Windows programs startable from within WSL, it helps to
+create some symlinks to e.g. `~/.local/bin/`:
+
+```
+cmd.exe → /mnt/c/Windows/System32/cmd.exe
+powershell.exe → /mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
+code → /mnt/c/Users/<UserName>/AppData/Local/Programs/Microsoft VS Code/bin/code
+```
+
 ## Upgrade
 
 Initial WSL (released with Win 10 Anniversary Update / v1607) shipped with Ubuntu
