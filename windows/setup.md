@@ -64,6 +64,9 @@ readline/history for `cmd.exe`
 
 ### Miscellaneous
 
+- [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) -
+  `winget install shutup10++` (available from cmd/PS with `shutup10` after installation)  
+  disable a lot of the dubious privacy-violating stuff of Windows 10/11
 - [Process Hacker](https://processhacker.sourceforge.io/) -
   `choco install processhacker`  
   seems superior to Process Explorer; last release (2.39) is kinda old (2016),
