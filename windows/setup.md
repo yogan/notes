@@ -169,6 +169,10 @@ usage information, just call `winget` without any arguments. There is `search`
 and `install`, as you would expect, but currently there does not seem to be an
 `update`.
 
+### Scoop
+
+*TODO* test [Scoop](https://scoop.sh), which seems to be the better choco
+
 ### Chocolatey
 
 #### First Time Setup
