@@ -1,34 +1,35 @@
 # Setting up a fresh Windows machine
 
-## Essentials
+## Bootstrapping with Scoop and winget
 
-- [WinGet](https://docs.microsoft.com/en-us/windows/package-manager/) - grab and install
-  `*.appxbundle` from [GitHub releases](https://github.com/microsoft/winget-cli/releases)
-  - one-liner (cmd):  
-    `for %x in (powertoys Microsoft.WindowsTerminal.Preview keepass git sharpkeys wincompose HermannSchinagl.LinkShellExtension chrisant996.Clink powershell eartrumpet spotify mpv.net ScreenToGif vscode) do winget install -s winget %x`
-  - missing stuff via choco (see below for choco setup):  
-    `choco install autoruns procexp paint.net fzf`
-- [Google Drive](https://www.google.com/drive/download/) _(currently not available via winget)_
-- [PowerToys](https://github.com/microsoft/PowerToys) - `winget install -s winget powertoys`
-- [Windows Terminal](https://github.com/microsoft/terminal) - `winget install -s winget Microsoft.WindowsTerminal.Preview`
-- [KeePass](http://keepass.info/) - `winget install -s winget keepass`
+This works fine for Windows 11, where Windows Terminal and winget are already included.
+
+- [Google Drive](https://www.google.com/drive/download/) (no scoop/winget)
+- install [Scoop](https://scoop.sh/) itself (non admin PowerShell):
+  - `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+  - `irm get.scoop.sh | iex`
+- git gud: `scoop install git`
+- add buckets: `scoop bucket add extras`, `scoop bucket add sysinternals`
+- get the goods: `scoop install sharpkeys wincompose clink fzf neovim bat ripgrep keepass spotify powertoys vscode autoruns processhacker eartrumpet mpv.net paint.net screentogif shutup10`
+- remaining stuff with winget:  
+  `foreach ($app in @("HermannSchinagl.LinkShellExtension")) { winget install -s winget %app }`
 
 ## Git
 
-- Git - `winget install -s winget git`
+- Git - `winget install -s winget git` / `scoop install git`
 - clone dotfiles once for Windows (later again for WSL)
   - in Windows home (`C:\Users\<user>`)
   - `git clone ssh://yogan@zogan.de/~yogan/git/priv/env`
 
 ## Keyboard
 
-- [SharpKeys](https://www.randyrants.com/category/sharpkeys/) - `winget install -s winget sharpkeys`
+- [SharpKeys](https://www.randyrants.com/category/sharpkeys/) - `winget install -s winget sharpkeys` / `scoop install sharpkeys`
   - map `<CapsLock>` → `<Ctrl>`
   - swap `<Esc>` ↔ `<~>`
   - *note: PowerToyes has a Keyboard Manager, but that one needs to be running for the
     mappings to work, and generally does not work for some elevated stuff, like win logon;
     SharpKeys does some registry stuff that is lower level and works better*
-- [WinCompose](https://github.com/SamHocevar/wincompose) - `winget install -s winget wincompose`
+- [WinCompose](https://github.com/SamHocevar/wincompose) - `winget install -s winget wincompose` / `scoop install wincompose`
   - symlink `WinCompose.XCompose` to `.XCompose` in `%userprofile%` (details how
     to symlink are at the top of `WinCompose.XCompose` itself)
   - use a env clone in Windows for this; do not link to env within WSL!
@@ -168,10 +169,6 @@ For [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
 usage information, just call `winget` without any arguments. There is `search`
 and `install`, as you would expect, but currently there does not seem to be an
 `update`.
-
-### Scoop
-
-*TODO* test [Scoop](https://scoop.sh), which seems to be the better choco
 
 ### Chocolatey
 
