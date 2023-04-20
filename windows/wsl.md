@@ -180,6 +180,13 @@ wsl --export Ubuntu-20.04 Ubuntu-20.04.tar
 
 ### Restore
 
+When restoring on a new machine without a WSL distro installed, first do:
+
+```sh
+wsl --install            # brings Ubuntu distro by default
+wsl --unregister Ubuntu  # get rid of the distro (will be replace by backup)
+```
+
 Target directory needs to exist. So in the example below, make sure to create
 `C:\WSL\` first.
 
@@ -206,34 +213,8 @@ wsl --set-version Ubuntu-18.04 1
 
 Unfortunatelly, the default user is lost by the backup/restore (see
 [this GitHub issue](https://github.com/microsoft/WSL/issues/3974)), so
-launching the distro gives you a `root` shell.
-
-The proper way to fix this would be:
+launching the distro gives you a `root` shell. This can be fixed like this:
 
 ```
 <distro>.exe config --default-user <user> # <distro>.exe is e.g. ubuntu2004.exe
 ```
-
-but the distro launcher (`ubuntu2004.exe`) is not part of the tarball, so
-it's lost when moving the distro to a new Windows installation. Either make
-a backup of the launcher as well, or you [wsldl](https://github.com/yuk7/wsldl)
-as a replacement.
-
-##### wsldl Setup
-
-- download [wsldl release](https://github.com/yuk7/wsldl/releases)
-- Edge might complain that this is not secure, as the binary is not signed, but ¯\_(ツ)_/¯
-- copy `wsldl.exe` to e.g. `C:\WSL\Ubuntu-20.04.exe`
-- add `C:\WSL` to system `$PATH`
-- `Ubuntu-20.04.exe config --default-user yogan`
-
-##### Registry Alternative
-
-Without the original launcher or `wsldl`, this can also be fixed directly in
-the registry (yes, the registry).
-
-- get the UID of your WSL user: `id -u <user>` (it's probably `1000`)
-- launch good ol' regedit, go to `Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss`
-- all distros are below that, check their `DistributionName` values to see which is which
-- put the UID of your user into `DefaultUid` (make sure to enter as decimal, not hex)
-- restart the distro (closing all instances should do it, or enfore with `wsl --terminate`)
