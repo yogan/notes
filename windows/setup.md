@@ -11,6 +11,9 @@ This works fine for Windows 11, where Windows Terminal and winget are already in
 - git gud: `scoop install git`
 - add buckets: `scoop bucket add extras`, `scoop bucket add sysinternals`
 - get the goods: `scoop install sharpkeys wincompose clink fzf neovim bat ripgrep keepass spotify powertoys vscode autoruns processhacker eartrumpet mpv.net paint.net screentogif shutup10`
+- for things that require admin, e.g. OpenVPN:
+  - `scoop install sudo`
+  - `sudo scoop install openvpn` _yes, sudo in PowerShell \o/_
 - remaining stuff with winget:  
   `foreach ($app in @("HermannSchinagl.LinkShellExtension")) { winget install -s winget %app }`
 
