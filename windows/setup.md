@@ -68,6 +68,7 @@ readline/history for `cmd.exe`
 
 ### Miscellaneous
 
+- [NanaZip](https://github.com/M2Team/NanaZip) 7zip clone with Win11 integration
 - [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) -
   `winget install shutup10++` (available from cmd/PS with `shutup10` after installation)  
   disable a lot of the dubious privacy-violating stuff of Windows 10/11
