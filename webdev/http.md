@@ -94,6 +94,12 @@ Content-Type:application/json
 > rm *                            # clear everything
 ```
 
+### Insomnia
+
+[Insomnia](https://insomnia.rest) is a graphical API client (Rest, GraphQL, WS, …), similar to Postman.
+Can store collections of API endpoints, supports multiple environments, etc. Free version is sufficient
+for most stuff.
+
 ### jq
 
 [jq](https://stedolan.github.io/jq/) is like `sed` for JSON data.
