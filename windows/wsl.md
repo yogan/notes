@@ -75,6 +75,14 @@ from a mobile phone) needs some tricks:
 
 ## Interoperability
 
+### USB Devices
+
+Newer versions of WSL2 (Windows 11 recommended) can use USB devices, but you have to
+make them available to a distro via [usbipd-win](https://github.com/dorssel/usbipd-win).
+
+- [install and usage instructions](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
+- [how it works](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/#how-it-works)
+
 ### Filesystem
 
 Since Win 10 1903, you
