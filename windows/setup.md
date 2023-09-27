@@ -18,6 +18,11 @@ This works fine for Windows 11, where Windows Terminal and winget are already in
 - remaining stuff with winget:  
   `foreach ($app in @("HermannSchinagl.LinkShellExtension")) { winget install -s winget %app }`
 
+## Updating pwsh with Scoop
+
+Since `scoop` is using `pwsh` internally, you will get errors about running `pwsh` processes.
+To fix this, start a *Windows PowerShell* (`powershell.exe`) session in Windows Terminal and do `scoop update pwsh` there (see https://github.com/ScoopInstaller/Main/issues/3572#issuecomment-1292873053).
+
 ## Git
 
 - Git - `winget install -s winget git` / `scoop install git`
