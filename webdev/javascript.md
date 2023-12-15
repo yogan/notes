@@ -13,6 +13,8 @@
 * [Jake Archibald: In The Loop](https://youtu.be/cCOL7MC4Pl0)
   (JSConf.Asia 2018, YouTube, 35 min.) - JS event loop, tasks, microtasks, promises,
   `setTimeout`, `requestAnimationFrame`, event listeners
+* [HTML DOM — Phuoc Nguyen](https://phuoc.ng/collection/html-dom/) has a lot of examples how to do various
+  DOM tasks with plain web APIs in JavaScript
 
 ## Testing
 
