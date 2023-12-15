@@ -10,7 +10,7 @@ This works fine for Windows 11, where Windows Terminal and winget are already in
   - `irm get.scoop.sh | iex`
 - git gud: `scoop install git`
 - add buckets: `scoop bucket add extras`, `scoop bucket add sysinternals`
-- get the goods: `scoop install sharpkeys wincompose clink neovim bat ripgrep keepassxc autoruns processhacker eartrumpet mpv.net paint.net screentogif shutup10 oh-my-posh git-aliases fzf psfzf zlocation`
+- get the goods: `scoop install sharpkeys wincompose clink neovim bat less ripgrep keepassxc autoruns processhacker eartrumpet mpv.net paint.net screentogif shutup10 oh-my-posh git-aliases fzf psfzf zlocation`
 - software with auto-updates (VS Code, Spotify, PowerToys, Windows Terminal) is better not installed via scoop
 - for things that require admin, e.g. OpenVPN:
   - `scoop install sudo`
