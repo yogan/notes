@@ -57,6 +57,24 @@ service](https://github.com/shayne/go-wsl2-host/issues/10#issuecomment-597399481
 
 > Local Security Policy > Local Policies > User Rights Assignment > Log on as a service
 
+## Regain Space by Compacting Virtual Disk Files (*.vhdx)
+
+This applies to both WSL and Docker Desktop (with WSL backend). It's especially useful
+after you have cleared up some Docker stuff with e.g. `docker system prune`, but there
+is no real spaced cleaned up on your drive. The reason is that the images etc. are stored
+in virtual disk images (`*.vhdx` files), and those need to be explicitly optimized to
+actually shrink in size.
+
+- close everything gravefully in WSL
+- in a Powershell:
+  - `wsl --shutdown` (can be checked with `wsl --list -v` - everything should be stopped)
+  - Docker Desktop will complain, just stop that as well
+- locate the `*.vhdx` images
+- in PowerShell:
+  - `sudo Optimize-VHD -Path "c:\WSL\Ubuntu\ext4.vhdx" -Mode Full`
+  - `sudo Optimize-VHD -Path "$env:LOCALAPPDATA\Docker\wsl\data\ext4.vhdx" -Mode Full`
+- enjoy space gains
+
 ## Networking
 
 Accessing ports opened in WSL2 from an external device (e.g. testing a web app
