@@ -61,11 +61,11 @@ service](https://github.com/shayne/go-wsl2-host/issues/10#issuecomment-597399481
 
 This applies to both WSL and Docker Desktop (with WSL backend). It's especially useful
 after you have cleared up some Docker stuff with e.g. `docker system prune`, but there
-is no real spaced cleaned up on your drive. The reason is that the images etc. are stored
+is no real space cleaned up on your drive. The reason is that the images etc. are stored
 in virtual disk images (`*.vhdx` files), and those need to be explicitly optimized to
 actually shrink in size.
 
-- close everything gravefully in WSL
+- close everything gracefully in WSL
 - in a Powershell:
   - `wsl --shutdown` (can be checked with `wsl --list -v` - everything should be stopped)
   - Docker Desktop will complain, just stop that as well
