@@ -27,6 +27,13 @@ Similar problem for *Windows Terminal*: here, closing all Windows Terminal insta
 starting `conhost` (legacy Windows command prompt), and running 
 `scoop update windows-terminal` there is the solution.
 
+## Semi-regular Scoop Cleanups
+
+```pwsh
+sudo scoop clean -a  # delete old app versions
+scoop cache rm *     # clear scoop cache
+```
+
 ## Git
 
 - Git - `winget install -s winget git` / `scoop install git`
