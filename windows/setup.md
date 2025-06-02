@@ -9,8 +9,8 @@ This works fine for Windows 11, where Windows Terminal and winget are already in
   - `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
   - `irm get.scoop.sh | iex`
 - git gud: `scoop install git`
-- add buckets: `scoop bucket add extras`, `scoop bucket add sysinternals`
-- get the goods: `scoop install sharpkeys wincompose clink neovim bat less fd ripgrep keepassxc autoruns processhacker eartrumpet mpv.net paint.net screentogif shutup10 oh-my-posh git-aliases fzf psfzf zlocation win32yank`
+- add buckets: `scoop bucket add extras`, `scoop bucket add sysinternals`, `scoop bucket add versions`
+- get the goods: `scoop install sharpkeys wincompose clink neovim bat less fd ripgrep keepassxc autoruns systeminformer-nightly eartrumpet mpv.net paint.net screentogif shutup10 oh-my-posh git-aliases fzf psfzf zlocation win32yank`
 - software with auto-updates (VS Code, Spotify, PowerToys, Windows Terminal) is better not installed via scoop
 - for things that require admin, e.g. OpenVPN:
   - `scoop install sudo`
@@ -89,14 +89,8 @@ readline/history for `cmd.exe`
 - [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) -
   `winget install shutup10++` (available from cmd/PS with `shutup10` after installation)  
   disable a lot of the dubious privacy-violating stuff of Windows 10/11
-- [Process Hacker](https://processhacker.sourceforge.io/) -
-  `choco install processhacker`  
-  seems superior to Process Explorer; last release (2.39) is kinda old (2016),
-  project seems to be currently developed as
-  [System Informer](https://github.com/winsiderss/systeminformer).
-- [Process
-  Explorer](https://technet.microsoft.com/en-us/sysinternals/bb896653.aspx) -
-  `choco install procexp`
+- [System Informer](https://systeminformer.com/)
+  has replaced Process Explorer and Process Hacker for me
 - [TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview) -
   `choco install tcpview`
 - [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx) -
